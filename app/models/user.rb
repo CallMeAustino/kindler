@@ -22,19 +22,31 @@ class User < ApplicationRecord
     #FIG VAPER
 
     def find_by_credentials(username, password)
+        @user = User.find(username: username)
+        return nil unless @user && @user.is_password?(password)
+        @user
     end
 
     def is_password?(password)
+        bc_password = BCrypt::Password.new(self.password_digest)
+        bc_password.is_password?(password)
     end
 
-    def generate_session_token
+    def self.generate_session_token
+        SecureRandom.urlsafe_base64
     end
 
     def password=(password)
+        @password = password
+        self.password_digest = BCrypt::Password.create(password)
     end
 
     def ensure_session_token
+        self.session_token ||= User.generate_session_token
     end
 
     def reset_session_token!    
+        self.session_token = User.generate_session_token
+        self.save  
+        self.session_token
     end
