@@ -22,6 +22,4 @@ class SessionsController < ApplicationController
         logout!
         redirect_to `/api/session/new`
     end
-
-    def 
 end
