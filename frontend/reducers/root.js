@@ -1,15 +1,14 @@
 import { combineReducers } from 'redux';
-//session reducer
+import sessionReducer from './session';
 //entities reducer
 
-const rootReducer = (state = {}, action) => {
-    return {
-        
-    }
-}
+const rootReducer = combineReducers({
+    session: sessionReducer
+});
+
 
 // const rootReducer = combineReducers({
 
 // })
 
-export default rootReducer
+export default rootReducer;
