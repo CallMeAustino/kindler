@@ -90,7 +90,7 @@
 /*!*************************************!*\
   !*** ./frontend/actions/session.js ***!
   \*************************************/
-/*! exports provided: RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_SESSION_ERRORS, createNewUser, login, logout */
+/*! exports provided: RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_SESSION_ERRORS, REMOVE_ERRORS, createNewUser, login, logout, remove */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,14 +98,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_CURRENT_USER", function() { return RECEIVE_CURRENT_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGOUT_CURRENT_USER", function() { return LOGOUT_CURRENT_USER; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_SESSION_ERRORS", function() { return RECEIVE_SESSION_ERRORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_ERRORS", function() { return REMOVE_ERRORS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNewUser", function() { return createNewUser; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "remove", function() { return remove; });
 /* harmony import */ var _util_session__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session */ "./frontend/util/session.js");
 
 var RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 var LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 var RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
+var REMOVE_ERRORS = 'REMOVE ERRORS';
 
 var receiveCurrentUser = function receiveCurrentUser(user) {
   // debugger
@@ -164,6 +167,12 @@ var logout = function logout() {
     }, function (err) {
       return dispatch(receiveErrors(err.responseJSON));
     });
+  };
+};
+var remove = function remove() {
+  return function (dispatch) {
+    // debugger
+    dispatch(removeErrors());
   };
 };
 
@@ -641,8 +650,8 @@ var Login = /*#__PURE__*/function (_React$Component) {
   _createClass(Login, [{
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      e.preventDefault();
-      debugger;
+      e.preventDefault(); // debugger
+
       this.props.login(this.state);
     }
   }, {
@@ -671,6 +680,12 @@ var Login = /*#__PURE__*/function (_React$Component) {
           key: "error-".concat(i)
         }, error);
       }));
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      // debugger
+      this.props.removeErrors();
     }
   }, {
     key: "render",
@@ -739,6 +754,9 @@ var mdp = function mdp(dispatch) {
   return {
     login: function login(user) {
       return dispatch(Object(_actions_session__WEBPACK_IMPORTED_MODULE_2__["login"])(user));
+    },
+    removeErrors: function removeErrors() {
+      return dispatch(Object(_actions_session__WEBPACK_IMPORTED_MODULE_2__["remove"])());
     }
   };
 };
@@ -830,6 +848,12 @@ var SignUp = /*#__PURE__*/function (_React$Component) {
       }));
     }
   }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      // debugger
+      this.props.removeErrors();
+    }
+  }, {
     key: "render",
     value: function render() {
       // debugger
@@ -899,6 +923,9 @@ var mdp = function mdp(dispatch) {
   return {
     createNewUser: function createNewUser(user) {
       return dispatch(Object(_actions_session__WEBPACK_IMPORTED_MODULE_2__["createNewUser"])(user));
+    },
+    removeErrors: function removeErrors() {
+      return dispatch(Object(_actions_session__WEBPACK_IMPORTED_MODULE_2__["remove"])());
     }
   };
 };
@@ -1053,8 +1080,9 @@ __webpack_require__.r(__webpack_exports__);
 
     case _actions_session__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
       return [];
-    // case REMOVE_ERRORS:
-    //     return [];
+
+    case _actions_session__WEBPACK_IMPORTED_MODULE_0__["REMOVE_ERRORS"]:
+      return [];
 
     default:
       return state;

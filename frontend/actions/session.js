@@ -3,6 +3,7 @@ import { createUser, deleteSession, createSession } from "../util/session";
 export const RECEIVE_CURRENT_USER = `RECEIVE_CURRENT_USER`;
 export const LOGOUT_CURRENT_USER = `LOGOUT_CURRENT_USER`;
 export const RECEIVE_SESSION_ERRORS = `RECEIVE_SESSION_ERRORS`;
+export const REMOVE_ERRORS = 'REMOVE ERRORS';
 
 const receiveCurrentUser = user => {
     // debugger
@@ -58,4 +59,9 @@ export const logout = () => dispatch => {
     ), err => (
         dispatch(receiveErrors(err.responseJSON))
     ));
+}
+
+export const remove = () => dispatch => {
+    // debugger
+    dispatch(removeErrors())
 }

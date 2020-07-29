@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createNewUser } from '../../actions/session';
+import { createNewUser, remove } from '../../actions/session';
 import { Link } from 'react-router-dom'
 import SignUp from './signup'
 
@@ -14,7 +14,8 @@ const msp = ( {errors} ) => {
 }
 const mdp = (dispatch) => {
     return {
-        createNewUser: user => dispatch(createNewUser(user))
+        createNewUser: user => dispatch(createNewUser(user)),
+        removeErrors: () => dispatch(remove())
     };
 };
 

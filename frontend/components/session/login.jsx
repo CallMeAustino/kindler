@@ -15,7 +15,7 @@ class Login extends React.Component {
     }
     handleSubmit(e) {
         e.preventDefault();
-        debugger
+        // debugger
         this.props.login(this.state)
     }
     demoLogin(e) {
@@ -37,6 +37,10 @@ class Login extends React.Component {
                 ))}
             </ul>
         );
+    }
+    componentWillUnmount(){
+        // debugger
+        this.props.removeErrors();
     }
     render() {
         return (

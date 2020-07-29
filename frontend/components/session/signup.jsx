@@ -32,6 +32,10 @@ class SignUp extends React.Component {
             </ul>
         );
     }
+    componentWillUnmount() {
+        // debugger
+        this.props.removeErrors();
+    }
     render(){
         // debugger
         return <section id="signup-form">

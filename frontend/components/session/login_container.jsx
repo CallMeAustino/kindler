@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from '../../actions/session';
+import { login, remove } from '../../actions/session';
 import Login from './login';
 import { Link } from 'react-router-dom'
+
 import SignUpContainer from './signup_container'
 
 const msp = ( {errors} ) => {
@@ -14,7 +15,8 @@ const msp = ( {errors} ) => {
 
 const mdp = dispatch => {
     return {
-        login: user => dispatch(login(user))
+        login: user => dispatch(login(user)),
+        removeErrors: () => dispatch(remove())
     }
 }
 
