@@ -23,7 +23,7 @@ const navBar = ({currentUser, logout}) => {
         <section className="global-nav-logo items-center relative">
             <Link to='/'>Kindler</Link>
         </section>
-        <section className="global-nav-right flex">
+        <section className="global-nav-right">
             <button className="minimal-bttn hover-ksr-green-700 mr">Search</button>
             {display}
         </section> 
