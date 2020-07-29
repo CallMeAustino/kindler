@@ -20,6 +20,10 @@
  }
 /* pieces */
  
+a {
+    text-decoration: none;
+    color: black;
+}
 button {
     font-size: inherit;
 }
@@ -30,6 +34,15 @@ button {
  .flex {
      display: flex;
  }
+
+ .space-between {
+     justify-content: space-between;
+ }
+
+ .center {
+     justify-content: center;
+ }
+
  .relative {
      position: relative;
  }
@@ -43,6 +56,9 @@ button {
      color: black;
  }
 
+ body {
+     margin: 0;
+ }
 /* NAV BAR */
  
 .minimal-bttn {
@@ -67,14 +83,19 @@ button {
 
 .global-nav-logo {
     font-size: 24px;
+    padding: 8px;
+
 }
 
 .global-nav-left {
     font-size: 18px;
+    padding: 12px;
 }
 
 .global-nav-right {
     font-size: 18px;
+    padding: 12px;
+
 }
 
 /* LEARN PAGE */
@@ -134,3 +155,30 @@ button {
 }
 
 /* END OF LEARN PAGE */
+
+/* FOOTER */
+
+#subcategory_bar {
+    height: 71px;
+
+}
+
+ul.inline li {
+    display: inline;
+}
+
+/* FOOTER ENDER */
+
+
+/* LOGIN */
+
+#login-signup {
+    background-color: #F7f7f6;
+}
+
+#user-account-form {
+    background-color: white;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+}

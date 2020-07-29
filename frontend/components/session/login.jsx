@@ -40,32 +40,34 @@ class Login extends React.Component {
     }
     render() {
         return (
-            <section id="login-form">
-                <h2>Log in</h2>
-                <form> 
-                    <label>Email
-                        <input
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                        />
-                    </label>
+            <section id="login-signup">
+                <section id="user-account-form">
+                    <h2>Log in</h2>
+                    <form> 
+                        <label>Email
+                            <input
+                                type="text"
+                                value={this.state.email}
+                                onChange={this.update('email')}
+                            />
+                        </label>
 
-                    <label>Password
-                        <input
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                        />
-                    </label>
-                    <button onClick={this.handleSubmit}>Log In</button>
-                    <button onClick={this.demoLogin}>Demo Login</button>
+                        <label>Password
+                            <input
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                            />
+                        </label>
+                        <button onClick={this.handleSubmit}>Log In</button>
+                        <button onClick={this.demoLogin}>Demo Login</button>
 
-                    {this.renderErrors()}
-                </form>
-                <div>
-                    New to Kickstarter? {this.props.signup}
-                </div>
+                        {this.renderErrors()}
+                    </form>
+                    <div>
+                        New to Kickstarter? {this.props.signup}
+                    </div>
+                </section>
             </section>
         )
     }

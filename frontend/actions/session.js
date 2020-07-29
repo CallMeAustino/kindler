@@ -27,11 +27,11 @@ const receiveErrors = errors => {
     }
 }
 
-// const removeErrors = () => {
-//     return {
-//         type: REMOVE_ERRORS,
-//     }
-// }
+const removeErrors = () => {
+    return {
+        type: REMOVE_ERRORS,
+    }
+}
 
 export const createNewUser = user => dispatch => {
     // debugger

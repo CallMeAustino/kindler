@@ -71,3 +71,5 @@ class SignUp extends React.Component {
 }
 
 export default SignUp;
+
+//add removeErrors action to componentWillUnmount(){}
