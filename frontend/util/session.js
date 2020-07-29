@@ -1,7 +1,8 @@
 export const createSession = user => {
     return $.ajax({
         method: `POST`,
-        url: `api/session`
+        url: `api/session`,
+        data: { user }
     });
 };
 

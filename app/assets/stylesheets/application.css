@@ -22,10 +22,9 @@
      position: relative;
  }
  #global-header {
-     display: block;
+     display: flex;
      font-family: Helvetica, Arial, sans-serif;
      justify-content: space-between;
-     flex-direction: row;
  }
 
 .items-center {
@@ -34,15 +33,14 @@
 }
 
 .global-nav-logo {
-    display: flex;
-    justify-content: center;
+    
 }
 
 .global-nav-left {
-    display: flex;
+    
 }
 
 .global-nav-right {
-    justify-content: end;
     display: flex;
+    justify-content: space-around;
 }

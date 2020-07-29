@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const navBar = ({currentUser, logout}) => {
+    // debugger
     const display = currentUser ? (
         <section>
             <h2>Welcome {currentUser.username}</h2>
@@ -13,21 +14,24 @@ const navBar = ({currentUser, logout}) => {
             </div>
         );
     return <section className="relative" id="global-header">
-        <section className="global-nav-left flex">
-            <a className="mr">Explore</a>
-            <a>Start a project</a>
+        <section className="global-nav-left">
+            
+                <Link className="btn mr" to="/explore">Explore</Link>
+            
+            
+                <Link className="btn" to="/learn">Start a project</Link>
+            
         </section>
-        <section className="global-nav-right flex">
-            <button>
-                <span className="mr">
-                    Search
-                </span>
+        <section className="global-nav-logo items-center relative">
+            <Link to='/'>Kindler</Link>
+        </section>
+        <section className="global-nav-right">
+            <button className="mr">
+                Search
             </button>
             {display}
         </section> 
-        <section className="global-nav-logo items-center relative">
-            <h1>Kickstarter</h1>
-        </section>
+        
     </section>
 }
 

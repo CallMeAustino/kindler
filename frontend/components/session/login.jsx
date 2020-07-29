@@ -10,19 +10,37 @@ class Login extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demoLogin = this.demoLogin.bind(this);
+
     }
     handleSubmit(e) {
         e.preventDefault();
+        debugger
         this.props.login(this.state)
+    }
+    demoLogin(e) {
+        e.preventDefault();
+        this.props.login({ email: "lauren", password: "lauren" })
     }
     update(type) {
         return e => {
             this.setState({[type]: e.currentTarget.value})
         }
     }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
     render() {
         return (
-            <section className="session-form">
+            <section id="login-form">
                 <h2>Log in</h2>
                 <form> 
                     <label>Email
@@ -40,8 +58,14 @@ class Login extends React.Component {
                             onChange={this.update('password')}
                         />
                     </label>
-                    <button onClick={this.handleSubmit}>Log In!</button>
+                    <button onClick={this.handleSubmit}>Log In</button>
+                    <button onClick={this.demoLogin}>Demo Login</button>
+
+                    {this.renderErrors()}
                 </form>
+                <div>
+                    New to Kickstarter? {this.props.signup}
+                </div>
             </section>
         )
     }
