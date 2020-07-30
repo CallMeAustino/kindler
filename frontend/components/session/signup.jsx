@@ -38,39 +38,43 @@ class SignUp extends React.Component {
     }
     render(){
         // debugger
-        return <section id="signup-form">
-            <h2>Sign up</h2>
-            <div>
-                Have an account? {this.props.login}
-            </div>
-            <form onSubmit={this.handleSubmit}>
-                <label>Name
-                        <input
-                        type="text"
-                        value={this.state.username}
-                        onChange={this.update('username')}
-                    />
-                </label>
-                <label>Email
-                        <input
-                        type="text"
-                        value={this.state.email}
-                        onChange={this.update('email')}
-                    />
-                </label>
-
-                <label>Password
-                        <input
-                        type="password"
-                        value={this.state.password}
-                        onChange={this.update('password')}
-                    />
-                </label>
-                <input type="submit" value="Create Account"/>
-                {this.renderErrors()}
-            </form>
-        </section>
-    }
+        return (
+            <section id="main-content">
+                <section id="login-signup">
+                    <section id="user-account-form">
+                        <p style={{ fontSize: 32 }}>Sign up</p>
+                        <div className="mb">
+                            Have an account? {this.props.login}
+                        </div>
+                        <form className="flex center column" onSubmit={this.handleSubmit}>
+                                    <input
+                                    className="mb"
+                                    placeholder="Name"
+                                    type="text"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                /> 
+                                    <input
+                                    className="mb"
+                                    placeholder="Email"
+                                    type="text"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                />
+                                    <input
+                                    placeholder="Password"
+                                    className="mb"
+                                    type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                />
+                            <input className="bttn bttn-green bttn-medium mb" type="submit" value="Create Account"/>
+                            {this.renderErrors()}
+                        </form>
+                    </section>
+                </section>
+            </section>
+        )}
     
 }
 

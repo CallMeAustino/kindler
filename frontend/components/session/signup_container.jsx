@@ -9,7 +9,7 @@ const msp = ( {errors} ) => {
     // debugger
     return {
         errors: errors.session,
-        login: <Link to="/login">Log in</Link>
+        login: <Link className="minimal-bttn hover-ksr-green-700" to="/login">Log in</Link>
     }
 }
 const mdp = (dispatch) => {

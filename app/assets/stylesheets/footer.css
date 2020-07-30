@@ -1,0 +1,55 @@
+#subcategory_bar {
+    position: relative;
+    height: 71px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid lightgray;
+
+}
+
+.pt4 {
+    position: relative;
+    height: 71px;
+    border-top: 2px solid lightgray;
+    padding-top: 10px;
+}
+
+.categories-container {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.socials-container {
+    margin: auto;
+    width: 80%;
+    padding: 30px;
+}
+
+ul.inline li {
+    display: inline;
+}
+
+#info-footer {
+
+}
+
+#info-footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#info-footer ul li {
+    margin-bottom: 7px;
+}
+
+#about, #support, #more {
+    width: 15%;
+    margin-right: 40px;
+}
+
+.k {
+    display: inline-block;
+    font-family: logo;
+    font-size: 25px;
+    margin-right: 15px;
+}

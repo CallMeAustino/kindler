@@ -44,33 +44,36 @@ class Login extends React.Component {
     }
     render() {
         return (
-            <section id="login-signup">
-                <section id="user-account-form">
-                    <h2>Log in</h2>
-                    <form> 
-                        <label>Email
-                            <input
-                                type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                            />
-                        </label>
+            <section id="main-content">
+                <section id="login-signup">
+                    <section id="user-account-form">
+                        <section className="rounded-content-frame">
+                        <p style={{fontSize: 32}}>Log in</p>
+                            <form className="flex center column"> 
+                                    <input
+                                        className="mb"
+                                        placeholder="Email"
+                                        type="text"
+                                        value={this.state.email}
+                                        onChange={this.update('email')}
+                                    />
+                                    <input
+                                        className="mb"
+                                        placeholder="Password"
+                                        type="password"
+                                        value={this.state.password}
+                                        onChange={this.update('password')}
+                                    />
+                                <button className="bttn bttn-green bttn-medium mb" onClick={this.handleSubmit}>Log In</button>
+                                <button className="bttn bttn-green bttn-medium" onClick={this.demoLogin}>Demo Login</button>
 
-                        <label>Password
-                            <input
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                            />
-                        </label>
-                        <button onClick={this.handleSubmit}>Log In</button>
-                        <button onClick={this.demoLogin}>Demo Login</button>
-
-                        {this.renderErrors()}
-                    </form>
-                    <div>
-                        New to Kickstarter? {this.props.signup}
-                    </div>
+                                {this.renderErrors()}
+                            </form>
+                            <div>
+                                New to Kickstarter? {this.props.signup}
+                            </div>
+                        </section>
+                    </section>
                 </section>
             </section>
         )

@@ -9,7 +9,7 @@ import SignUpContainer from './signup_container'
 const msp = ( {errors} ) => {
     return {
         errors: errors.session,
-        signup: <Link to="/signup">Sign Up.</Link>
+        signup: <Link to="/signup">Sign Up</Link>
     }
 }
 

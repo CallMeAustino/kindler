@@ -18,5 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
     //window objects
 
     window.store = store
+    // window.onclick = function(e) {
+    //     debugger
+        // const pdc = document.getElementById('pdc');
+        // if(!e.target.matches('#pdc')) {
+        //     if (e.target.classList.contains('show')) {
+        //         debugger
+        //         e.target.classList.remove('show');
+        //     }
+        // }
+    // }
     ReactDOM.render(<Root store={store}/>, root)
 })
