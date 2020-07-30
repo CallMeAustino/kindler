@@ -16,7 +16,6 @@ const msp = (state) => {
 const mdp = (dispatch) => {
     function toggleShow(){
         document.getElementById('pdc').classList.toggle("show");
-        console.log("Hello");
     }
     return {
         logout: () => dispatch(logout()),
