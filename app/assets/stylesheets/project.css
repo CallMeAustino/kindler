@@ -175,6 +175,7 @@ textarea:focus {
     width: 40%;
     padding: 20px; 
     text-align: left;
+    color: green;
 }
 .verification-button.false {
     /* background-color: lightgray;
@@ -190,5 +191,5 @@ textarea:focus {
     text-decoration: none;
     width: 40%;
     padding: 20px; 
-    color: green;
+    color: black;
 }
