@@ -20,7 +20,7 @@ class Page1 extends React.Component {
                                     role="presentation"
                                     onChange={(e) => this.props.handleChange(e, "category")}
                                 >
-                                    <option role="option" value="0">Select car:</option>
+                                    <option role="option" value="0">Select category:</option>
                                     <option role="option" value="Art">Art</option>
                                     <option role="option" value="Comics">Comics & Illustration</option>
                                     <option role="option" value="Design & Tech">Design & Tech</option>

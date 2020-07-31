@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resource :session, only: [:create, :destroy] #new is not here because it is just a form that renders(front end)
     resources :users
+    resources :projects
   end
   root to: 'root#root'
 end

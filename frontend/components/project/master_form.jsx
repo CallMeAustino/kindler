@@ -22,13 +22,18 @@ class MasterForm extends React.Component {
 
     }
     handleChange(e, attribute) {
-        debugger
         this.setState({[attribute]: e.target.value})
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        const { category, description, location } = this.state;
+        const author_id = store.getState().session.currentUser.id
+        const project = this.state;
+        delete project["currentStep"];
+        debugger
+        project["author_id"] = author_id
+        debugger
+        this.props.createNewProject(project)
     }
         // e.preventDefault();
         // const { category, description, password } = this.state;
@@ -134,5 +139,6 @@ class MasterForm extends React.Component {
         </>
     }
 }
+
 
 export default MasterForm;

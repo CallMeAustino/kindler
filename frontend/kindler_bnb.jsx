@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //window objects
 
     window.store = store
+
     // window.onclick = function(e) {
     //     debugger
         // const pdc = document.getElementById('pdc');
