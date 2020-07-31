@@ -149,7 +149,7 @@ textarea:focus {
     position: relative;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     width: 40%;
     font-size: 12px;
 }
@@ -162,9 +162,33 @@ textarea:focus {
 }
 
 .verification-button {
+    /* background-color: greenyellow;
     display: block;
     position: relative;
+    margin: auto; */
+    position: relative;
+    display: block;
+    border: 0;
     margin: auto;
+    background: transparent;
+    text-decoration: none;
     width: 40%;
-    margin-bottom: 20px;
+    padding: 20px; 
+    text-align: left;
+}
+.verification-button.false {
+    /* background-color: lightgray;
+    display: block;
+    position: relative;
+    margin: auto; */
+    text-align: left;
+    position: relative;
+    display: block;
+    border: 0;
+    margin: auto;
+    background: transparent;
+    text-decoration: none;
+    width: 40%;
+    padding: 20px; 
+    color: green;
 }

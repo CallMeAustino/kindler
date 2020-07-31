@@ -19,6 +19,7 @@ class MasterForm extends React.Component {
         this._prev = this._prev.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggle = this.toggle.bind(this);
 
     }
     componentWillUnmount(){
@@ -31,6 +32,12 @@ class MasterForm extends React.Component {
     }
     handleChange(e, attribute) {
         this.setState({[attribute]: e.target.value})
+    }
+
+    toggle(ele) {
+        // debugger
+        this.forceUpdate();
+        $(ele).toggleClass('false');
     }
 
     handleSubmit(e) {
@@ -115,12 +122,14 @@ class MasterForm extends React.Component {
         return null;
         }
     }
+
     handleSubmitButton(){
         if(this.state.currentStep === 3) {
+            // debugger
             return (
                 <button
                     className="project-bttn"
-                    disabled={this.state.location === ""}
+                    disabled={this.state.location === "" || $(".false").length !== 0}
                     type="button" onClick={this.handleSubmit}>
                     Continue
                 </button>
@@ -155,6 +164,7 @@ class MasterForm extends React.Component {
                     handleChange={this.handleChange}
                     location={this.state.location}
                     masterState={this.state}
+                    toggle={this.toggle}
 
                 />
                 <div className="grid-col-12">

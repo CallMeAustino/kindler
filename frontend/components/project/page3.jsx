@@ -4,9 +4,10 @@ class Page3 extends React.Component {
     constructor(props) {
         super(props)
     }
-    toggleChecked() {
-
-    }
+    // toggle(ele) {
+    //     // debugger
+    //     $(ele).toggleClass('false');
+    // }
     render() {
         // debugger
         if (this.props.currentStep !== 3) {
@@ -41,13 +42,13 @@ class Page3 extends React.Component {
                             </div>
                             <div className="verification">
                                 {/* <input id="age" type="checkbox" value="age"/> */}
-                                <button onClick={() => toggleChecked()} className="verification-button">I am at least 18 years old.</button>
+                                <button onClick={(e) => this.props.toggle(e.target)} className="verification-button false">I am at least 18 years old.</button>
 
-                                <button onClick={() => toggleChecked()} className="verification-button">I can verify an address and bank account.</button>
+                                <button onClick={(e) => this.props.toggle(e.target)} className="verification-button false">I can verify an address and bank account.</button>
 
-                                <button onClick={() => toggleChecked()} className="verification-button">I can verify a government issued ID.</button>
+                                <button onClick={(e) => this.props.toggle(e.target)} className="verification-button false">I can verify a government issued ID.</button>
 
-                                <button onClick={() => toggleChecked()} className="verification-button">I have a debit and/or credit card.</button>
+                                <button onClick={(e) => this.props.toggle(e.target)} className="verification-button false">I have a debit and/or credit card.</button>
                             </div>
                         </div>
                     </div>

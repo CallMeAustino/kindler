@@ -708,6 +708,7 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     _this._prev = _this._prev.bind(_assertThisInitialized(_this));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.toggle = _this.toggle.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -725,6 +726,13 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     key: "handleChange",
     value: function handleChange(e, attribute) {
       this.setState(_defineProperty({}, attribute, e.target.value));
+    }
+  }, {
+    key: "toggle",
+    value: function toggle(ele) {
+      // debugger
+      this.forceUpdate();
+      $(ele).toggleClass('false');
     }
   }, {
     key: "handleSubmit",
@@ -810,9 +818,10 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmitButton",
     value: function handleSubmitButton() {
       if (this.state.currentStep === 3) {
+        // debugger
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "project-bttn",
-          disabled: this.state.location === "",
+          disabled: this.state.location === "" || $(".false").length !== 0,
           type: "button",
           onClick: this.handleSubmit
         }, "Continue");
@@ -848,7 +857,8 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
         currentStep: this.state.currentStep,
         handleChange: this.handleChange,
         location: this.state.location,
-        masterState: this.state
+        masterState: this.state,
+        toggle: this.toggle
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "grid-col-12"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1134,12 +1144,13 @@ var Page3 = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Page3);
 
     return _super.call(this, props);
-  }
+  } // toggle(ele) {
+  //     // debugger
+  //     $(ele).toggleClass('false');
+  // }
+
 
   _createClass(Page3, [{
-    key: "toggleChecked",
-    value: function toggleChecked() {}
-  }, {
     key: "render",
     value: function render() {
       var _this = this;
@@ -1205,25 +1216,25 @@ var Page3 = /*#__PURE__*/function (_React$Component) {
       }, "What if my country isn't listed?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "verification"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return toggleChecked();
+        onClick: function onClick(e) {
+          return _this.props.toggle(e.target);
         },
-        className: "verification-button"
+        className: "verification-button false"
       }, "I am at least 18 years old."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return toggleChecked();
+        onClick: function onClick(e) {
+          return _this.props.toggle(e.target);
         },
-        className: "verification-button"
+        className: "verification-button false"
       }, "I can verify an address and bank account."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return toggleChecked();
+        onClick: function onClick(e) {
+          return _this.props.toggle(e.target);
         },
-        className: "verification-button"
+        className: "verification-button false"
       }, "I can verify a government issued ID."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: function onClick() {
-          return toggleChecked();
+        onClick: function onClick(e) {
+          return _this.props.toggle(e.target);
         },
-        className: "verification-button"
+        className: "verification-button false"
       }, "I have a debit and/or credit card."))))));
     }
   }]);
