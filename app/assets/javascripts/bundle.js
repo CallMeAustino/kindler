@@ -655,6 +655,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _page1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./page1 */ "./frontend/components/project/page1.jsx");
 /* harmony import */ var _page2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./page2 */ "./frontend/components/project/page2.jsx");
 /* harmony import */ var _page3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./page3 */ "./frontend/components/project/page3.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -678,6 +679,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -806,7 +808,16 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       // debugger
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, this.state.currentStep, " of 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_page1__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "project-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "project-header"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+        className: "project-title",
+        to: "/"
+      }, "Kindler")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "page-counter"
+      }, this.state.currentStep, " of 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_page1__WEBPACK_IMPORTED_MODULE_1__["default"], {
         currentStep: this.state.currentStep,
         handleChange: this.handleChange,
         category: this.state.category
@@ -818,7 +829,7 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
         currentStep: this.state.currentStep,
         handleChange: this.handleChange,
         location: this.state.location
-      }), this.previousButton(), this.nextButton(), this.handleSubmitButton()));
+      }), this.previousButton(), this.nextButton(), this.handleSubmitButton())));
     }
   }]);
 
@@ -922,19 +933,23 @@ var Page1 = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "onboarding-category-tab"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "First, let's get you set up."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Pick a project category to connect with a specific community. You can always update this later."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "project-prompt"
+      }, "First, let's get you set up."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "project-prompt"
+      }, "Pick a project category to connect with a specific community. You can always update this later."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navy-700"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        role: "listbox"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
         role: "presentation",
+        className: "category-dropdown",
         onChange: function onChange(e) {
           return _this.props.handleChange(e, "category");
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         role: "option",
-        value: "0"
-      }, "Select category:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+        value: "0",
+        hidden: true
+      }, "Select your category"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         role: "option",
         value: "Art"
       }, "Art"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
@@ -958,7 +973,7 @@ var Page1 = /*#__PURE__*/function (_React$Component) {
       }, "Music"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         role: "option",
         value: "Publishing"
-      }, "Publishing"))))));
+      }, "Publishing")))));
     }
   }]);
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Page1 from './page1';
 import Page2 from './page2';
 import Page3 from './page3';
-
+import { Link } from 'react-router-dom';
 
 class MasterForm extends React.Component {
     constructor(props) {
@@ -114,7 +114,11 @@ class MasterForm extends React.Component {
     render() {
         // debugger
         return <>
-            <span>{this.state.currentStep} of 3</span>
+        <div className="project-container">
+            <div className="project-header">
+                <Link className="project-title" to='/'>Kindler</Link>
+            </div>
+            <span className="page-counter">{this.state.currentStep} of 3</span>
             <form>
                 <Page1
                     currentStep={this.state.currentStep}
@@ -136,6 +140,7 @@ class MasterForm extends React.Component {
                 {this.handleSubmitButton()}
                 
             </form>
+        </div>
         </>
     }
 }
