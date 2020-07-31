@@ -54,3 +54,117 @@
 .category-dropdown option{
   position: absolute;
 }
+
+.project-bttn {
+    height: 3.0rem;
+    padding: 0 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    border-radius: 0;
+    background-color: #282828;
+    color: white;
+    cursor: pointer;
+}
+
+.project-bttn:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+
+.back-bttn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #656969;
+    cursor: pointer;
+}
+
+.back-bttn:hover {
+    color: black;
+    transition-duration: 300ms;
+}
+.project-bttn:hover:enabled {
+    transform: translateY(-1px);
+    background-color: black;
+}
+
+.project-bttn:disabled {
+    opacity: 0.8;
+}
+
+.grid-col-12 {
+    display: block;
+    margin: auto;
+}
+.project-bttn-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    width: 40%;
+    padding-top: 20px;
+    border-top: 1px solid lightgrey;
+}
+
+.project-description {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 40%;
+    height: 100px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.17);
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+textarea {
+    transition: 300ms;
+    resize: none;
+}
+textarea:focus {
+    border: 1px solid #009E74;
+}
+
+.country-dropdown {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 40%;
+    height: 40px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.17);
+    border: none;
+    padding: 10px;
+}
+
+.country-warning {
+    display: block;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 40%;
+    font-size: 12px;
+}
+
+.verification {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.verification-button {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 20px;
+}

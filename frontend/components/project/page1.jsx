@@ -16,6 +16,7 @@ class Page1 extends React.Component {
                     <h3 className="project-prompt">Pick a project category to connect with a specific community. You can always update this later.</h3>
                     <div className="navy-700">
                                 <select 
+                                    value={this.props.masterState.category}
                                     role="presentation"
                                     className="category-dropdown"
                                     onChange={(e) => this.props.handleChange(e, "category")}

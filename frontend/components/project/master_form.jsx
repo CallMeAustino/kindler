@@ -21,6 +21,14 @@ class MasterForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
 
     }
+    componentWillUnmount(){
+        this.state = {
+            currentStep: 1,
+            category: '',
+            description: '',
+            location: ''
+        }
+    }
     handleChange(e, attribute) {
         this.setState({[attribute]: e.target.value})
     }
@@ -57,10 +65,16 @@ class MasterForm extends React.Component {
 
     previousButton() {
         let currentStep = this.state.currentStep;
-        if (currentStep === 2) {
+        if (currentStep === 1) {
+            return (
+                <div className="back-bttn">
+                    You're doing great. No, really.
+                </div>
+            )
+        } else if (currentStep === 2) {
             return (
                 <button
-                    className=""
+                    className="back-bttn"
                     type="button" onClick={this._prev}>
                         Category
                     </button>
@@ -68,7 +82,7 @@ class MasterForm extends React.Component {
         } else if (currentStep === 3) {
             return (
                 <button
-                    className=""
+                    className="back-bttn"
                     type="button" onClick={this._prev}>
                     Project idea
                 </button>
@@ -82,7 +96,8 @@ class MasterForm extends React.Component {
         if (currentStep === 1){
             return (
                 <button
-                    className=""
+                    className="project-bttn"
+                    disabled={this.state.category === ""}
                     type="button" onClick={this._next}>
                         Next: Project idea                 
                     </button>
@@ -90,7 +105,8 @@ class MasterForm extends React.Component {
         } else if (currentStep === 2) {
             return (
                 <button
-                    className=""
+                    className="project-bttn"
+                    disabled={this.state.description === ""}
                     type="button" onClick={this._next}>
                     Next: Location
                 </button>
@@ -103,7 +119,8 @@ class MasterForm extends React.Component {
         if(this.state.currentStep === 3) {
             return (
                 <button
-                    className=""
+                    className="project-bttn"
+                    disabled={this.state.location === ""}
                     type="button" onClick={this.handleSubmit}>
                     Continue
                 </button>
@@ -124,20 +141,29 @@ class MasterForm extends React.Component {
                     currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
                     category={this.state.category}
+                    masterState={this.state}
                 />
                 <Page2
                     currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
                     description={this.state.description}
+                    masterState={this.state}
+
                 />
                 <Page3
                     currentStep={this.state.currentStep}
                     handleChange={this.handleChange}
                     location={this.state.location}
+                    masterState={this.state}
+
                 />
-                {this.previousButton()}
-                {this.nextButton()}
-                {this.handleSubmitButton()}
+                <div className="grid-col-12">
+                    <div className="project-bttn-container">
+                        {this.handleSubmitButton()}
+                        {this.nextButton()}
+                        {this.previousButton()}
+                    </div>
+                </div>
                 
             </form>
         </div>

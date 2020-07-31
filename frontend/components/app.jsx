@@ -11,7 +11,7 @@ import { Route, Switch } from 'react-router-dom';
 const App = () => {
     return <>
     <Switch>
-        <Route path ="/start" component={MasterFormContainer} />
+        <ProtectedRoute path ="/start" component={MasterFormContainer} />
         <HeaderLayout exact path="/" component={HomeContainer} />
         <HeaderLayout exact path="/learn" component={LearnContainer} />
         <AuthRoute path="/login" component={LoginContainer}/> 

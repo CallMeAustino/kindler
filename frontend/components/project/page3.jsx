@@ -4,6 +4,9 @@ class Page3 extends React.Component {
     constructor(props) {
         super(props)
     }
+    toggleChecked() {
+
+    }
     render() {
         // debugger
         if (this.props.currentStep !== 3) {
@@ -12,15 +15,17 @@ class Page3 extends React.Component {
         return (
             <section>
                 <section id="onboarding-category-tab">
-                    <h2>Finally, let's confirm your eligibility.</h2>
-                    <h3>Tell us where you're based and confirm a few other details before we proceed.</h3>
+                    <h2 className="project-prompt">Finally, let's confirm your eligibility.</h2>
+                <h3 className="project-prompt">Tell us where you're based and confirm a few other details before we proceed.</h3>
                     <div className="navy-700">
                         <div role="listbox">
                             <select
+                                value={this.props.masterState.location}
+                                className="country-dropdown"
                                 role="presentation"
                                 onChange={(e) => this.props.handleChange(e, "location")}
                             >
-                                <option role="option" value="0">Select your country</option>
+                                <option role="option" value="0" hidden>Select your country</option>
                                 <option role="option" value="Australia">Australia</option>
                                 <option role="option" value="Belgium">Belgium</option>
                                 <option role="option" value="Canada">Canada</option>
@@ -31,18 +36,19 @@ class Page3 extends React.Component {
                                 <option role="option" value="Japan">Japan</option>
                                 <option role="option" value="United States">United States</option>
                             </select>
-                            <br></br>
-                            <input id="age" type="checkbox" value="age"/>
-                            <label>I am at least 18 years old.</label>
+                            <div className="navy-700">
+                                <a href="www.google.com" className="country-warning">What if my country isn't listed?</a>
+                            </div>
+                            <div className="verification">
+                                {/* <input id="age" type="checkbox" value="age"/> */}
+                                <button onClick={() => toggleChecked()} className="verification-button">I am at least 18 years old.</button>
 
-                            <input id="age" type="checkbox" value="age" />
-                            <label>I can verify an address and bank account.</label>
+                                <button onClick={() => toggleChecked()} className="verification-button">I can verify an address and bank account.</button>
 
-                            <input id="age" type="checkbox" value="age" />
-                            <label>I can verify a government issued ID.</label>
+                                <button onClick={() => toggleChecked()} className="verification-button">I can verify a government issued ID.</button>
 
-                            <input id="age" type="checkbox" value="age" />
-                            <label>I have a debit and/or credit card.</label>
+                                <button onClick={() => toggleChecked()} className="verification-button">I have a debit and/or credit card.</button>
+                            </div>
                         </div>
                     </div>
                 </section>

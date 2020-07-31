@@ -254,7 +254,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Route"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_8__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_7__["ProtectedRoute"], {
     path: "/start",
     component: _project_master_form_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -712,6 +712,16 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(MasterForm, [{
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.state = {
+        currentStep: 1,
+        category: '',
+        description: '',
+        location: ''
+      };
+    }
+  }, {
     key: "handleChange",
     value: function handleChange(e, attribute) {
       this.setState(_defineProperty({}, attribute, e.target.value));
@@ -753,15 +763,19 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     value: function previousButton() {
       var currentStep = this.state.currentStep;
 
-      if (currentStep === 2) {
+      if (currentStep === 1) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "back-bttn"
+        }, "You're doing great. No, really.");
+      } else if (currentStep === 2) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "",
+          className: "back-bttn",
           type: "button",
           onClick: this._prev
         }, "Category");
       } else if (currentStep === 3) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "",
+          className: "back-bttn",
           type: "button",
           onClick: this._prev
         }, "Project idea");
@@ -776,13 +790,15 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
 
       if (currentStep === 1) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "",
+          className: "project-bttn",
+          disabled: this.state.category === "",
           type: "button",
           onClick: this._next
         }, "Next: Project idea");
       } else if (currentStep === 2) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "",
+          className: "project-bttn",
+          disabled: this.state.description === "",
           type: "button",
           onClick: this._next
         }, "Next: Location");
@@ -795,7 +811,8 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmitButton() {
       if (this.state.currentStep === 3) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "",
+          className: "project-bttn",
+          disabled: this.state.location === "",
           type: "button",
           onClick: this.handleSubmit
         }, "Continue");
@@ -820,16 +837,23 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
       }, this.state.currentStep, " of 3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_page1__WEBPACK_IMPORTED_MODULE_1__["default"], {
         currentStep: this.state.currentStep,
         handleChange: this.handleChange,
-        category: this.state.category
+        category: this.state.category,
+        masterState: this.state
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_page2__WEBPACK_IMPORTED_MODULE_2__["default"], {
         currentStep: this.state.currentStep,
         handleChange: this.handleChange,
-        description: this.state.description
+        description: this.state.description,
+        masterState: this.state
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_page3__WEBPACK_IMPORTED_MODULE_3__["default"], {
         currentStep: this.state.currentStep,
         handleChange: this.handleChange,
-        location: this.state.location
-      }), this.previousButton(), this.nextButton(), this.handleSubmitButton())));
+        location: this.state.location,
+        masterState: this.state
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "grid-col-12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "project-bttn-container"
+      }, this.handleSubmitButton(), this.nextButton(), this.previousButton())))));
     }
   }]);
 
@@ -940,6 +964,7 @@ var Page1 = /*#__PURE__*/function (_React$Component) {
       }, "Pick a project category to connect with a specific community. You can always update this later."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navy-700"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        value: this.props.masterState.category,
         role: "presentation",
         className: "category-dropdown",
         onChange: function onChange(e) {
@@ -1041,9 +1066,15 @@ var Page2 = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "onboarding-category-tab"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Describe what you'll be creating."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "And don't worry, you can edit this later, too."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "project-prompt"
+      }, "Describe what you'll be creating."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "project-prompt"
+      }, "And don't worry, you can edit this later, too."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navy-700"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+        className: "project-description",
+        value: this.props.masterState.description,
         onChange: function onChange(e) {
           return _this.props.handleChange(e, "description");
         },
@@ -1106,6 +1137,9 @@ var Page3 = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Page3, [{
+    key: "toggleChecked",
+    value: function toggleChecked() {}
+  }, {
     key: "render",
     value: function render() {
       var _this = this;
@@ -1117,18 +1151,25 @@ var Page3 = /*#__PURE__*/function (_React$Component) {
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "onboarding-category-tab"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Finally, let's confirm your eligibility."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Tell us where you're based and confirm a few other details before we proceed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "project-prompt"
+      }, "Finally, let's confirm your eligibility."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        className: "project-prompt"
+      }, "Tell us where you're based and confirm a few other details before we proceed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "navy-700"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         role: "listbox"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+        value: this.props.masterState.location,
+        className: "country-dropdown",
         role: "presentation",
         onChange: function onChange(e) {
           return _this.props.handleChange(e, "location");
         }
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         role: "option",
-        value: "0"
+        value: "0",
+        hidden: true
       }, "Select your country"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         role: "option",
         value: "Australia"
@@ -1156,23 +1197,34 @@ var Page3 = /*#__PURE__*/function (_React$Component) {
       }, "Japan"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
         role: "option",
         value: "United States"
-      }, "United States")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "age",
-        type: "checkbox",
-        value: "age"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "I am at least 18 years old."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "age",
-        type: "checkbox",
-        value: "age"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "I can verify an address and bank account."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "age",
-        type: "checkbox",
-        value: "age"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "I can verify a government issued ID."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        id: "age",
-        type: "checkbox",
-        value: "age"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "I have a debit and/or credit card.")))));
+      }, "United States")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navy-700"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "www.google.com",
+        className: "country-warning"
+      }, "What if my country isn't listed?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "verification"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {
+          return toggleChecked();
+        },
+        className: "verification-button"
+      }, "I am at least 18 years old."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {
+          return toggleChecked();
+        },
+        className: "verification-button"
+      }, "I can verify an address and bank account."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {
+          return toggleChecked();
+        },
+        className: "verification-button"
+      }, "I can verify a government issued ID."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: function onClick() {
+          return toggleChecked();
+        },
+        className: "verification-button"
+      }, "I have a debit and/or credit card."))))));
     }
   }]);
 
