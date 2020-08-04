@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
-import Root from './components/root'
+import Root from './components/root';
+// import { requestMyProjects } from './actions/project';
+// import { fetchMyProjects } from './util/projects';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         preloadedState = {
             session: {
                 currentUser: window.currentUser
-            }
+            }, 
         };
     }
     const store = configureStore(preloadedState)
@@ -18,16 +20,5 @@ document.addEventListener("DOMContentLoaded", () => {
     //window objects
 
     window.store = store
-
-    // window.onclick = function(e) {
-    //     debugger
-        // const pdc = document.getElementById('pdc');
-        // if(!e.target.matches('#pdc')) {
-        //     if (e.target.classList.contains('show')) {
-        //         debugger
-        //         e.target.classList.remove('show');
-        //     }
-        // }
-    // }
     ReactDOM.render(<Root store={store}/>, root)
 })

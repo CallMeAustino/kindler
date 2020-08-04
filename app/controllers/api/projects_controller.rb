@@ -10,12 +10,20 @@ class Api::ProjectsController < ApplicationController
     end
 
     def show
-        
+        @project = Project.find(params[:id])
+        render json: @project
     end
 
     def index
-        
+        @user = User.find_by(id: params[:user_id])
+        @projects = @user.projects
+        render :index
     end
+
+    # def myprojects
+    #     @projects = Project.find_by_user(params[:userId])
+    #     render json: @projects
+    # end
 
     def update
        

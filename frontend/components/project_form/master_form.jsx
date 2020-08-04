@@ -2,13 +2,15 @@ import React from 'react';
 import Page1 from './page1';
 import Page2 from './page2';
 import Page3 from './page3';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+
 
 class MasterForm extends React.Component {
     constructor(props) {
         super(props) 
         // debugger
         this.state = { 
+            // redirect: null,
             currentStep: 1,
             category: '',
             description: '',
@@ -24,6 +26,7 @@ class MasterForm extends React.Component {
     }
     componentWillUnmount(){
         this.state = {
+            redirect: null,
             currentStep: 1,
             category: '',
             description: '',
@@ -39,20 +42,20 @@ class MasterForm extends React.Component {
         this.forceUpdate();
         $(ele).toggleClass('false');
     }
-
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         const author_id = store.getState().session.currentUser.id
         const project = this.state;
         delete project["currentStep"];
-        debugger
+        delete project["redirect"];
         project["author_id"] = author_id
-        debugger
         this.props.createNewProject(project)
+            .then(action => {
+            console.log("test")
+            return(this.props.history.push(`/projects/${ author_id }/${action.project.id}`))
+        })
     }
-        // e.preventDefault();
-        // const { category, description, password } = this.state;
-    
 
     _next(){
         let currentStep = this.state.currentStep;
@@ -138,7 +141,10 @@ class MasterForm extends React.Component {
     }
     //fragment prevents additional DOM nodes from being generated when component renders
     render() {
-        // debugger
+        // if (this.state.redirect) {
+        //     debugger
+        //     return <Redirect to={this.state.redirect} />
+        // }
         return <>
         <div className="project-container">
             <div className="project-header">

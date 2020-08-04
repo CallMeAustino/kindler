@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Home from './home';
+import { requestMyProjects } from '../../actions/project';
+
 
 const msp = (state) => {
     // debugger
@@ -11,6 +13,7 @@ const msp = (state) => {
 
 const mdp = (dispatch) => {
     return {
+        requestMyProjects: (userId) => dispatch(requestMyProjects(userId))
     }
 }
 

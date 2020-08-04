@@ -11,4 +11,8 @@ class Project < ApplicationRecord
         primary_key: :id,
         foreign_key: :project_id,
         class_name: :Comment
+
+    def find_by_user(userId) 
+        Project.where('author_id = ?', userId)
+    end
 end

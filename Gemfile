@@ -42,6 +42,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate'
+  gem 'aws-sdk-s3'
 end
 
 group :development do

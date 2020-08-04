@@ -16,9 +16,23 @@ export const deleteProject = (projectId) => {
 
 export const updateProject = (project) => {
     return $.ajax({
-        method: `DELETE`,
+        method: `PATCH`,
         url: `api/projects/${projectId}`,
         data: project
     })
 }
+
+export const fetchProject = projectId => (
+    $.ajax({
+        method: "GET",
+        url: `/api/projects/${projectId}`,
+    })
+);
+
+export const fetchMyProjects = (userId) => (
+    $.ajax({
+        method: "GET",
+        url: `/api/users/${userId}/projects`,
+    })
+);
 

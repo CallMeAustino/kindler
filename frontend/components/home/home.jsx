@@ -1,19 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { fetchMyProjects } from './util/projects';
+// import { requestMyProjects } from '../../actions/project';
 
-const home = () => {
-    // debugger
-    return <section className="main-content">
-        <div className="categories">
-            <nav className="flex justify-center">
 
-            </nav>
-        </div>
 
-        <div className="grid-container">
+class Home extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    componentDidMount(){
+        debugger
+        this.props.requestMyProjects(window.currentUser.id)
+    }
+    
+    render(){
+        debugger
+        return <section className="main-content">
+            <div className="categories">
+                <nav className="flex justify-center">
 
-        </div>
-    </section>
+                </nav>
+            </div>
+
+            <div className="grid-container">
+
+            </div>
+        </section>
+    }
 }
 
-export default home;
+export default Home;

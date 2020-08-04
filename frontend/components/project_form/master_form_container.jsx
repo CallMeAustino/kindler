@@ -5,6 +5,7 @@ import { createNewProject } from '../../actions/project';
 
 const msp = (state) => {
     return {
+        state
     }
 }
 
