@@ -16,7 +16,8 @@ const navBar = ({currentUser, logout, toggleShow}) => {
     ) : (
                 <Link className="minimal-bttn hover-ksr-green-700 mr" to="/login">Log In</Link>
         );
-    return <section className="relative" id="global-header">
+    return <>
+    <section className="relative" id="global-header">
         <section className="global-nav-left items-center">
             
             <button className="minimal-bttn hover-ksr-green-700 mr">Explore</button>
@@ -32,8 +33,21 @@ const navBar = ({currentUser, logout, toggleShow}) => {
             <button className="minimal-bttn hover-ksr-green-700 mr">Search</button>
             {display}
         </section> 
-        
     </section>
+        <div className="subcategory-bar-top">
+                <ul className="flex center inline">
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/arts">Arts</Link></li>
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/comics-illustration">Comics & Illustration</Link></li>
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/design-tech">Design & Tech</Link></li>
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/film">Film</Link></li>
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/food-craft">Food & Craft</Link></li>
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/games">Games</Link></li>
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/music">Music</Link></li>
+                    <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/publishing">Publishing</Link></li>
+                </ul>
+        </div>
+    </>
+        
 }
 
 export default navBar;

@@ -249,6 +249,7 @@ textarea:focus {
     background-color: darkgray;
     padding: 20px;
     margin: 20px;
+    margin-bottom: 0;
 }
 
 .one-three {
@@ -271,4 +272,50 @@ textarea:focus {
 
 .bg-lightgreen {
     background-color: lightgreen;
+}
+
+.pledged {
+    color: #009E74;
+    font-size: 25px;
+    margin-bottom: 0;
+    border-top: 6px solid #009E74;
+}
+
+.pledged-total {
+    font-size: 13px;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+.backers {
+    color: #656569;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.backers-word {
+    font-size: 13px;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+/*PROJECT INDEX*/
+
+.project-item{
+    text-align: center;
+    font-weight: bold;
+}
+
+.bespoke-hover-tranisition-bottom-bar{
+    text-decoration: none;
+    transition: text-decoration 300ms;
+    text-align: center;
+}
+.bespoke-hover-tranisition-bottom-bar:hover{
+    text-decoration: underline;
+}
+
+.index-title{
+    text-decoration: underline;
+    margin-bottom: 30px;
 }

@@ -10,7 +10,7 @@ class Home extends React.Component {
         super(props)
     }
     componentDidMount(){
-        debugger
+        // debugger
         if (window.store.getState().session.currentUser !== null) {
             this.props.requestMyProjects(window.store.getState().session.currentUser.id)
         }

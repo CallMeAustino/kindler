@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const footer = () => {
     // debugger
-    return <section className="relative">
+    return <section style={{marginTop:150}}className="relative">
         <div id="subcategory_bar">
                 <div className="categories-container">
                         <ul className="flex center inline">
@@ -17,7 +17,7 @@ const footer = () => {
                             <li><Link className="minimal-bttn hover-ksr-green-700 mr" to="/publishing">Publishing</Link></li>
                         </ul>
                 </div>
-            </div>
+        </div>
         <div className="grid-container">
             <div id="info-footer" className="flex center">
                 <div id="about">

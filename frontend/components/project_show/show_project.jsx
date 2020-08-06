@@ -3,8 +3,10 @@ import { connect } from 'react-redux'
 import { requestMyProjects } from '../../actions/project'
 import { Link } from 'react-router-dom';
 import { requestProject } from '../../actions/project'
+import { patchProject } from '../../actions/project';
 import NavBarContainer from '../nav_bar/nav_bar_container'
 import FooterContainer from '../footer/footer_container';
+import { openModal, closeModal } from '../../actions/project'
 
 
 // import NavBarContainer from "../nav_bar/nav_bar_container";
@@ -29,10 +31,6 @@ class ShowProject extends React.Component {
         this.props.fetchProject(this.props.match.params.projectId)
 
     }
-    componentDidUpdate(){
-        // debugger
-    }
-
     handleEdit(e) {
         e.preventDefault();
         this.props.history.push(`/projects/${this.props.match.params.userId}/${this.props.match.params.projectId}/edit`)
@@ -51,7 +49,20 @@ class ShowProject extends React.Component {
             )
         } return null;
     }
+    handleBacking() {
+        // e.preventDefault();
+        // const author_id = store.getState().session.currentUser.id
+        // const project = this.state;
+        // delete project["currentStep"];
+        // delete project["redirect"];
+        // project["author_id"] = author_id;
+        // debugger
+        // project["id"] = parseInt(this.props.match.params.projectId);
+        // debugger
+        // this.props.patchProject(project)
+    }
     render() {
+        debugger
         let current_proj = {};
         current_proj = window.store.getState().entities.projects[parseInt(this.props.match.params.projectId)]
        
@@ -72,16 +83,14 @@ class ShowProject extends React.Component {
                         <div className="two-three">image goes here</div>
                         <section className="one-three">
                             <div>
-                                <h3>"X"</h3>
-                                <h4>pledged of {current_proj.goal} goal</h4>
+                                <h3 className="pledged">${current_proj.sum}</h3>
+                                <h4 className="pledged-total">pledged of ${current_proj.goal} goal</h4>
                             </div>
                             <div>
-                                <h3>"#of backers"</h3>
-                                <h4>backers</h4>
+                                <h3 className="backers">{current_proj.total_backers}</h3>
+                                <h4 className="backers-word">backers</h4>
                             </div>
-                            <button className="bttn bttn-green bttn-large">
-                                Back this project
-                            </button>
+                            {this.props.modal}
                         </section>
                     </section>
                     
@@ -101,10 +110,22 @@ const msp = state => {
 const mdp = dispatch => {
     return {
         requestMyProjects: (userId) => dispatch(requestMyProjects(userId)),
-        fetchProject: (projectId) => dispatch(requestProject(projectId))
+        fetchProject: (projectId) => dispatch(requestProject(projectId)),
+        patchProject: (project) => dispatch(patchProject(project)),
+        modal: (
+            <button className="bttn bttn-green bttn-large" onClick={() => dispatch(openModal('back'))}>
+                Back this project
+            </button>
+        ),
+        closeModal: () => dispatch(closeModal())
+
     }
 }
 
 export default connect(msp,mdp)(ShowProject);
 
 //{/* {current_proj.author_id === window.store.getState().session.currentUser.id ? this.handleEditButton() : null} */}
+
+{/* <button onClick={() => handleBacking()} className="bttn bttn-green bttn-large">
+                                Back this project
+                            </button> */}

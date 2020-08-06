@@ -10,9 +10,11 @@ import EditShowProject from './project_show/edit_show_project';
 import HeaderLayout from '../util/header_util';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch } from 'react-router-dom';
+import Modal from './modal/modal';
 
 const App = () => {
     return <>
+    <Modal />
     <Switch>
         <HeaderLayout exact path="/" component={HomeContainer} />
         <ProtectedRoute exact path="/myprojects" component={MyProjects}/>

@@ -8,6 +8,16 @@
 
 }
 
+.subcategory-bar-top {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 71px;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+
+}
+
 .pt4 {
     position: relative;
     height: 71px;
@@ -31,10 +41,6 @@
 
 ul.inline li {
     display: inline;
-}
-
-#info-footer {
-
 }
 
 #info-footer ul {

@@ -18,6 +18,11 @@ class User < ApplicationRecord
         foreign_key: :author_id,
         class_name: :Comment
 
+    has_many :project_backers,
+        primary_key: :id,
+        foreign_key: :backer_id,
+        class_name: :ProjectBacker
+
     #unsure of other associations (through associations?)
     #FIG VAPER
 

@@ -19,12 +19,16 @@ class MyProjects extends React.Component {
     }
     
     render() {
+        // debugger
             return (
                 <>
                     <NavBarContainer />
-                    {/* {this.props.projects.forEach(prop => {
-
-                    })} */}
+                    <h1 className="center index-title">Your Current Projects:</h1>
+                    <ul style={{listStyleType:"none"}}>
+                        {Object.values(this.props.projects).map((project, idx) => {
+                            return <li key={idx} className="bespoke-hover-tranisition-bottom-bar mb-20"><Link to={`/projects/${project.author_id}/${project.id}`}>{project.description}</Link></li>
+                        })}
+                    </ul>
                     <FooterContainer />
                 </>
             )
@@ -33,7 +37,8 @@ class MyProjects extends React.Component {
 
 const msp = state => {
     return {
-        projects: state.entities.projects
+        projects: state.entities.projects,
+        state: state
     }
 }
 

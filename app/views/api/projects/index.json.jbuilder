@@ -7,5 +7,7 @@
         json.category project.category
         json.goal project.goal
         json.location project.location
+        json.sum project.find_sum
+        json.total_backers project.total_backers
     end
 end

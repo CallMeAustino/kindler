@@ -1,8 +1,27 @@
-import { createProject, updateProject, deleteProject, fetchMyProjects, fetchProject } from "../util/projects";
+import { createProject, updateProject, deleteProject, fetchMyProjects, fetchProject, addBacking } from "../util/projects";
 
 export const RECEIVE_PROJECT = 'RECEIVE_PROJECT';
 export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
 export const RECEIVE_PROJECT_ERRORS = 'RECEIVE_PROJECT_ERRORS';
+export const OPEN_MODAL = 'OPEN_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const RECEIVE_BACKING = 'RECEIVE_BACKING';
+
+export const openModal = modal => {
+    // debugger
+    return {
+        type: OPEN_MODAL,
+        modal
+    }
+}
+
+export const closeModal = modal => {
+    // debugger
+    return {
+        type: CLOSE_MODAL,
+        modal
+    }
+}
 
 const receiveProject = project => {
     // debugger
@@ -17,6 +36,14 @@ const receiveProjects = projects => {
     return {
         type: RECEIVE_PROJECTS,
         projects
+    }
+}
+
+const receiveBacking = backing => {
+    // debugger
+    return {
+        type: RECEIVE_BACKING,
+        backing
     }
 }
 
@@ -65,3 +92,11 @@ export const requestProject = projectId => dispatch => {
         ))
 }
 
+export const addBacker = backing => dispatch => {
+    addBacking(backing).then(backing =>  
+    (dispatch(receiveBacking(backing))
+    ), err => (
+        dispatch(receiveErrors(err.responseJSON))
+    )
+    )
+}
