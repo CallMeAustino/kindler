@@ -4,6 +4,8 @@ import { requestMyProjects } from '../../actions/project'
 import { Link } from 'react-router-dom';
 import { requestProject } from '../../actions/project'
 import NavBarContainer from '../nav_bar/nav_bar_container'
+import FooterContainer from '../footer/footer_container';
+
 
 // import NavBarContainer from "../nav_bar/nav_bar_container";
 // import FooterContainer from '../footer/footer_container';
@@ -58,14 +60,17 @@ class ShowProject extends React.Component {
         return (
             <>
                 <NavBarContainer />
-                <div style={{padding:20}} className="bg-lightgray">
-                    <section>
+                <div style={{padding:20}} className="bg-lightgray border-top">
+                    <div>
+                        {current_proj.author_id === window.store.getState().session.currentUser.id ? this.handleEditButton() : null}
+                    </div>
+                    <section className="flex center column mb-20">
                         <h1>{current_proj.name}</h1>
                         <p>{current_proj.description}</p>
                     </section>
-                    <section>
-                        <div>image goes here</div>
-                        <section>
+                    <section className="flex">
+                        <div className="two-three">image goes here</div>
+                        <section className="one-three">
                             <div>
                                 <h3>"X"</h3>
                                 <h4>pledged of {current_proj.goal} goal</h4>
@@ -74,18 +79,14 @@ class ShowProject extends React.Component {
                                 <h3>"#of backers"</h3>
                                 <h4>backers</h4>
                             </div>
-                        <button className="bttn bttn-green bttn-large">
-                            Back this project
-                        </button>
+                            <button className="bttn bttn-green bttn-large">
+                                Back this project
+                            </button>
                         </section>
-                        <div>
-                            {current_proj.author_id === window.store.getState().session.currentUser.id ? this.handleEditButton() : null}
-                        </div>
-
                     </section>
                     
                 </div>
-                {/* <FooterContainer /> */}
+                <FooterContainer />
             </>
         )} else return null;
     }

@@ -28,8 +28,21 @@ class Home extends React.Component {
                 </nav>
             </div>
 
-            <div className="grid-container">
+            <div className="flex">
+                <section className="three-five">
 
+                </section>
+                <section className="two-five">
+                    <section style={{minHeight:70}} className="bg-lightgreen mb-20">
+
+                    </section>
+                    <section style={{ minHeight: 70 }} className="bg-lightgreen mb-20">
+
+                    </section>
+                    <section style={{ minHeight: 70 }} className="bg-lightgreen mb-20">
+
+                    </section>
+                </section>
             </div>
         </section>
     }

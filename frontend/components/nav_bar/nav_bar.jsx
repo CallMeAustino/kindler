@@ -6,9 +6,11 @@ const navBar = ({currentUser, logout, toggleShow}) => {
     const display = currentUser ? (
         <section>
             <button onClick={() => toggleShow()} className="dot">{currentUser.username[0].toUpperCase()}</button>
-            <div id="pdc">
-                <h3>Created Projects</h3>
-                <button className="minimal-bttn hover-ksr-green-700 mr" onClick={logout}>Logout</button>
+            <div id="pdc" className="rounded">
+                <div className="dropdown-container flex column">
+                    <Link to="/myprojects">My Projects</Link>
+                    <button className="minimal-bttn hover-ksr-green-700 mr mt-20" onClick={logout}>Logout</button>
+                </div>
             </div>
         </section>
     ) : (

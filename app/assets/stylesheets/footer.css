@@ -1,5 +1,7 @@
 #subcategory_bar {
-    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items:center;
     height: 71px;
     border-top: 2px solid gray;
     border-bottom: 2px solid lightgray;
@@ -17,6 +19,8 @@
     margin: auto;
     width: 80%;
     padding: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .socials-container {

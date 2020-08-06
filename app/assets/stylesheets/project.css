@@ -15,6 +15,11 @@
 .border-top {
     border-top: 1px solid lightgray;
 }
+
+.border-top-black {
+    border-top: 1px solid darkgray;
+}
+
 .project-title {
     font-family: logo;
     font-size: 30px;
@@ -237,4 +242,33 @@ textarea:focus {
 
 .ml-20 {
     margin-left: 20px;
+}
+
+.two-three {
+    flex-basis: 66.6%;
+    background-color: darkgray;
+    padding: 20px;
+    margin: 20px;
+}
+
+.one-three {
+    flex-basis: 33.3%;
+}
+
+.three-five {
+    flex-basis: 60%;
+    background-color: darkgray;
+    padding: 20px;
+    margin: 20px;
+}
+
+.two-five { 
+    flex-basis: 40%;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    margin: 20px;
+}
+
+.bg-lightgreen {
+    background-color: lightgreen;
 }

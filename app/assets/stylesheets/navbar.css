@@ -78,6 +78,12 @@
     display: inline-block;
 }
 
-.dropdown-content button, .dropdown-content a {
+.dropdown-container{
+    padding:20px;
+    background-color: #FBFBFA;
 
+}
+
+.rounded {
+    border: 1px solid darkgray;
 }
