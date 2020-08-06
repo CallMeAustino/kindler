@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBarContainer from "../nav_bar/nav_bar_container";
 import FooterContainer from '../footer/footer_container';
+import { requestMyProjects } from '../../actions/project';
+
 
 
 class Login extends React.Component {
@@ -42,7 +44,6 @@ class Login extends React.Component {
         );
     }
     componentWillUnmount(){
-        // debugger
         this.props.removeErrors();
     }
     render() {

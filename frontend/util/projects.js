@@ -1,5 +1,5 @@
 export const createProject = project => {
-    debugger
+    // debugger
     return $.ajax({
         method: `POST`,
         url: `api/projects`,
@@ -17,8 +17,8 @@ export const deleteProject = (projectId) => {
 export const updateProject = (project) => {
     return $.ajax({
         method: `PATCH`,
-        url: `api/projects/${projectId}`,
-        data: project
+        url: `api/projects/${project.id}`,
+        data: { project }
     })
 }
 

@@ -12,6 +12,9 @@
     border-bottom: 1px solid lightgray;
 }
 
+.border-top {
+    border-top: 1px solid lightgray;
+}
 .project-title {
     font-family: logo;
     font-size: 30px;
@@ -125,6 +128,18 @@
     margin-bottom: 40px;
 }
 
+.project-description-small {
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 40%;
+    height: 20px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.17);
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
 textarea {
     transition: 300ms;
     resize: none;
@@ -192,4 +207,34 @@ textarea:focus {
     width: 40%;
     padding: 20px; 
     color: black;
+}
+
+#basics-header-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+.edit-page-titles {
+    margin-top: 30px;
+}
+
+.light {
+    font-weight: lighter;
+}
+
+.next-button {
+    margin-right: 15px;
+}
+
+.bg-lightgray {
+    background-color: #FBFBFA;
+}
+
+.ml-20 {
+    margin-left: 20px;
 }

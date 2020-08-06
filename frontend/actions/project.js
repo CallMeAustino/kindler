@@ -1,4 +1,4 @@
-import { createProject, updateProject, deleteProject, fetchMyProjects } from "../util/projects";
+import { createProject, updateProject, deleteProject, fetchMyProjects, fetchProject } from "../util/projects";
 
 export const RECEIVE_PROJECT = 'RECEIVE_PROJECT';
 export const RECEIVE_PROJECTS = 'RECEIVE_PROJECTS';
@@ -39,9 +39,29 @@ export const createNewProject = project => dispatch => {
 }
 
 export const requestMyProjects = userId => dispatch => {
+    // debugger
     fetchMyProjects(userId).then(projects =>
         (dispatch(receiveProjects(projects))
         ), err => (
             dispatch(receiveErrors(err.responseJSON))
         ))
 }
+
+export const patchProject = project => dispatch => {
+    // debugger
+    updateProject(project).then(project => 
+        (dispatch(receiveProject(project))
+        ), err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
+}
+
+export const requestProject = projectId => dispatch => {
+    // debugger
+    fetchProject(projectId).then(project =>
+        (dispatch(receiveProject(project))
+        ), err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
+}
+

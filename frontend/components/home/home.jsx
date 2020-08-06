@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { fetchMyProjects } from './util/projects';
-// import { requestMyProjects } from '../../actions/project';
+
+
 
 
 
@@ -11,11 +11,16 @@ class Home extends React.Component {
     }
     componentDidMount(){
         debugger
-        this.props.requestMyProjects(window.currentUser.id)
+        if (window.store.getState().session.currentUser !== null) {
+            this.props.requestMyProjects(window.store.getState().session.currentUser.id)
+        }
+    }
+
+    componentDidUpdate(){
     }
     
     render(){
-        debugger
+        // debugger
         return <section className="main-content">
             <div className="categories">
                 <nav className="flex justify-center">

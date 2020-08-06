@@ -38,7 +38,6 @@ class MasterForm extends React.Component {
     }
 
     toggle(ele) {
-        // debugger
         this.forceUpdate();
         $(ele).toggleClass('false');
     }
@@ -52,7 +51,6 @@ class MasterForm extends React.Component {
         project["author_id"] = author_id
         this.props.createNewProject(project)
             .then(action => {
-            console.log("test")
             return(this.props.history.push(`/projects/${ author_id }/${action.project.id}`))
         })
     }

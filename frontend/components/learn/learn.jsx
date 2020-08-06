@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const learn = () => {
+    // debugger
     
     return <section className="main-content">
         <section className="grid-container learn-title">

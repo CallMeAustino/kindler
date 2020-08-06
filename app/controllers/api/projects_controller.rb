@@ -26,10 +26,16 @@ class Api::ProjectsController < ApplicationController
     # end
 
     def update
-       
+        @oldproject = Project.find(params[:id])
+        if @oldproject.update(project_params)
+            render json: @oldproject
+        else
+            render json: @oldproject.errors.full_messages, status: 422
+        end
     end
+       
 
     def project_params
-        params.require(:project).permit(:category, :description, :author_id, :location)
+        params.require(:project).permit(:name, :goal, :id, :category, :description, :author_id, :location)
     end
 end
