@@ -6,7 +6,7 @@ import SignUp from './signup'
 
 
 const msp = ( {errors} ) => {
-    // debugger
+    
     return {
         errors: errors.session,
         login: <Link className="minimal-bttn hover-ksr-green-700" to="/login">Log in</Link>

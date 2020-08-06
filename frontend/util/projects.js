@@ -1,5 +1,5 @@
 export const createProject = project => {
-    // debugger
+    
     return $.ajax({
         method: `POST`,
         url: `api/projects`,
@@ -37,7 +37,7 @@ export const fetchMyProjects = (userId) => (
 );
 
 export const addBacking = (backing) => {
-    // debugger
+    
     return $.ajax({
         method: "POST",
         url: `/api/project_backers`,

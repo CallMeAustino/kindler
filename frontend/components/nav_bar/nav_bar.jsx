@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const navBar = ({currentUser, logout, toggleShow}) => {
-    // debugger
+    
     const display = currentUser ? (
         <section>
             <button onClick={() => toggleShow()} className="dot">{currentUser.username[0].toUpperCase()}</button>

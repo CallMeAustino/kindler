@@ -6,7 +6,7 @@ export const RECEIVE_SESSION_ERRORS = `RECEIVE_SESSION_ERRORS`;
 export const REMOVE_ERRORS = 'REMOVE ERRORS';
 
 const receiveCurrentUser = user => {
-    // debugger
+    
     return {
         type: RECEIVE_CURRENT_USER,
         user
@@ -14,14 +14,14 @@ const receiveCurrentUser = user => {
 }
 
 const logoutCurrentUser = () => {
-    // debugger
+    
     return {
         type: LOGOUT_CURRENT_USER
     };
 };
 
 const receiveErrors = errors => {
-    // debugger
+    
     return {
         type: RECEIVE_SESSION_ERRORS,
         errors
@@ -35,7 +35,7 @@ const removeErrors = () => {
 }
 
 export const createNewUser = user => dispatch => {
-    // debugger
+    
     createUser(user).then(user => 
         (dispatch(receiveCurrentUser(user))
     ), err => (
@@ -44,7 +44,7 @@ export const createNewUser = user => dispatch => {
 }
 
 export const login = user => dispatch => {
-    // debugger
+    
     createSession(user).then(user => 
         (dispatch(receiveCurrentUser(user))
     ), err => (
@@ -53,7 +53,7 @@ export const login = user => dispatch => {
 }
 
 export const logout = () => dispatch => {
-    // debugger
+    
     deleteSession().then(() => 
         (dispatch(logoutCurrentUser())
     ), err => (
@@ -62,6 +62,6 @@ export const logout = () => dispatch => {
 }
 
 export const remove = () => dispatch => {
-    // debugger
+    
     dispatch(removeErrors())
 }

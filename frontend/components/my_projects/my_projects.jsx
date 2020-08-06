@@ -6,20 +6,13 @@ import { requestProject } from '../../actions/project'
 import NavBarContainer from '../nav_bar/nav_bar_container'
 import FooterContainer from '../footer/footer_container';
 
-
-// import NavBarContainer from "../nav_bar/nav_bar_container";
-// import FooterContainer from '../footer/footer_container';
-
-
-// import { fetchRecentProject } from '../../actions/project'
-
 class MyProjects extends React.Component {
     constructor(props) {
         super(props)
     }
     
     render() {
-        // debugger
+        
             return (
                 <>
                     <NavBarContainer />

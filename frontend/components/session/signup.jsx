@@ -23,7 +23,7 @@ class SignUp extends React.Component {
         }
     }
     renderErrors() {
-        // debugger
+        
         return(
             <ul>
                 {this.props.errors.map((error,i) => (
@@ -35,11 +35,11 @@ class SignUp extends React.Component {
         );
     }
     componentWillUnmount() {
-        // debugger
+        
         this.props.removeErrors();
     }
     render(){
-        // debugger
+        
         return (
             <>
                 <NavBarContainer />
@@ -85,5 +85,3 @@ class SignUp extends React.Component {
 }
 
 export default SignUp;
-
-//add removeErrors action to componentWillUnmount(){}

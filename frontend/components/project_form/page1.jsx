@@ -5,7 +5,7 @@ class Page1 extends React.Component {
         super(props)
     }
     render(){
-        // debugger
+        
     if (this.props.currentStep !==1) {
         return null
     }

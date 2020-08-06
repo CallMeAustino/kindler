@@ -5,7 +5,7 @@ import { requestMyProjects } from '../../actions/project';
 
 
 const msp = (state) => {
-    // debugger
+    
     return {
         currentUser: state.session.currentUser,
     }

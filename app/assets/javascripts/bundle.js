@@ -117,14 +117,12 @@ var OPEN_MODAL = 'OPEN_MODAL';
 var CLOSE_MODAL = 'CLOSE_MODAL';
 var RECEIVE_BACKING = 'RECEIVE_BACKING';
 var openModal = function openModal(modal) {
-  // debugger
   return {
     type: OPEN_MODAL,
     modal: modal
   };
 };
 var closeModal = function closeModal(modal) {
-  // debugger
   return {
     type: CLOSE_MODAL,
     modal: modal
@@ -132,7 +130,7 @@ var closeModal = function closeModal(modal) {
 };
 
 var receiveProject = function receiveProject(project) {
-  // debugger
+  debugger;
   return {
     type: RECEIVE_PROJECT,
     project: project
@@ -140,7 +138,7 @@ var receiveProject = function receiveProject(project) {
 };
 
 var receiveProjects = function receiveProjects(projects) {
-  // debugger
+  debugger;
   return {
     type: RECEIVE_PROJECTS,
     projects: projects
@@ -148,7 +146,6 @@ var receiveProjects = function receiveProjects(projects) {
 };
 
 var receiveBacking = function receiveBacking(backing) {
-  // debugger
   return {
     type: RECEIVE_BACKING,
     backing: backing
@@ -156,7 +153,6 @@ var receiveBacking = function receiveBacking(backing) {
 };
 
 var receiveErrors = function receiveErrors(errors) {
-  // debugger
   return {
     type: RECEIVE_PROJECT_ERRORS,
     errors: errors
@@ -174,7 +170,6 @@ var createNewProject = function createNewProject(project) {
 };
 var requestMyProjects = function requestMyProjects(userId) {
   return function (dispatch) {
-    // debugger
     Object(_util_projects__WEBPACK_IMPORTED_MODULE_0__["fetchMyProjects"])(userId).then(function (projects) {
       return dispatch(receiveProjects(projects));
     }, function (err) {
@@ -184,7 +179,6 @@ var requestMyProjects = function requestMyProjects(userId) {
 };
 var patchProject = function patchProject(project) {
   return function (dispatch) {
-    // debugger
     Object(_util_projects__WEBPACK_IMPORTED_MODULE_0__["updateProject"])(project).then(function (project) {
       return dispatch(receiveProject(project));
     }, function (err) {
@@ -194,7 +188,6 @@ var patchProject = function patchProject(project) {
 };
 var requestProject = function requestProject(projectId) {
   return function (dispatch) {
-    // debugger
     Object(_util_projects__WEBPACK_IMPORTED_MODULE_0__["fetchProject"])(projectId).then(function (project) {
       return dispatch(receiveProject(project));
     }, function (err) {
@@ -239,7 +232,6 @@ var RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 var REMOVE_ERRORS = 'REMOVE ERRORS';
 
 var receiveCurrentUser = function receiveCurrentUser(user) {
-  // debugger
   return {
     type: RECEIVE_CURRENT_USER,
     user: user
@@ -247,14 +239,12 @@ var receiveCurrentUser = function receiveCurrentUser(user) {
 };
 
 var logoutCurrentUser = function logoutCurrentUser() {
-  // debugger
   return {
     type: LOGOUT_CURRENT_USER
   };
 };
 
 var receiveErrors = function receiveErrors(errors) {
-  // debugger
   return {
     type: RECEIVE_SESSION_ERRORS,
     errors: errors
@@ -269,7 +259,6 @@ var removeErrors = function removeErrors() {
 
 var createNewUser = function createNewUser(user) {
   return function (dispatch) {
-    // debugger
     Object(_util_session__WEBPACK_IMPORTED_MODULE_0__["createUser"])(user).then(function (user) {
       return dispatch(receiveCurrentUser(user));
     }, function (err) {
@@ -279,7 +268,6 @@ var createNewUser = function createNewUser(user) {
 };
 var login = function login(user) {
   return function (dispatch) {
-    // debugger
     Object(_util_session__WEBPACK_IMPORTED_MODULE_0__["createSession"])(user).then(function (user) {
       return dispatch(receiveCurrentUser(user));
     }, function (err) {
@@ -289,7 +277,6 @@ var login = function login(user) {
 };
 var logout = function logout() {
   return function (dispatch) {
-    // debugger
     Object(_util_session__WEBPACK_IMPORTED_MODULE_0__["deleteSession"])().then(function () {
       return dispatch(logoutCurrentUser());
     }, function (err) {
@@ -299,7 +286,6 @@ var logout = function logout() {
 };
 var remove = function remove() {
   return function (dispatch) {
-    // debugger
     dispatch(removeErrors());
   };
 };
@@ -328,7 +314,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_header_util__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../util/header_util */ "./frontend/util/header_util.jsx");
 /* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
+/* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
 
 
 
@@ -344,7 +330,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_modal_modal__WEBPACK_IMPORTED_MODULE_12__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_11__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_9__["default"], {
     exact: true,
     path: "/",
     component: _home_home_container__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -376,17 +362,7 @@ var App = function App() {
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (App); //Old Code im too scared to throw away 
-// import NavBarContainer from './nav_bar/nav_bar_container';
-// import FooterContainer from './footer/footer_container';
-
-{
-  /* <Route path="/" component={NavBarContainer} /> */
-}
-{
-  /* <Route path="/" component={FooterContainer} /> */
-} //currently, I have component routes rendering eachother to bypass the limitation of one invoked 'layout'. Now 
-// I am able to render one component at a time, by but adding full "pages" in each rendered container
+/* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
@@ -459,14 +435,13 @@ var BackProject = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "update",
     value: function update(e) {
-      // debugger
+      debugger;
       e.preventDefault();
       var obj = {
         project_id: parseInt(window.currentProj),
         backer_id: window.store.getState().session.currentUser.id,
         amount: parseInt(this.state.amount)
-      }; // debugger
-
+      };
       this.props.addBacker(obj);
     }
   }, {
@@ -474,7 +449,6 @@ var BackProject = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      // debugger
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "back-project-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -540,7 +514,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var footer = function footer() {
-  // debugger
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     style: {
       marginTop: 150
@@ -636,7 +609,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var msp = function msp(state) {
-  // debugger
   return {};
 };
 
@@ -699,7 +671,6 @@ var Home = /*#__PURE__*/function (_React$Component) {
   _createClass(Home, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // debugger
       if (window.store.getState().session.currentUser !== null) {
         this.props.requestMyProjects(window.store.getState().session.currentUser.id);
       }
@@ -710,7 +681,6 @@ var Home = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // debugger
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "main-content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -769,7 +739,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var msp = function msp(state) {
-  // debugger
   return {
     currentUser: state.session.currentUser
   };
@@ -803,7 +772,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var learn = function learn() {
-  // debugger
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "main-content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -841,7 +809,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var msp = function msp(state) {
-  // debugger
   return {};
 };
 
@@ -876,16 +843,14 @@ function Modal(_ref) {
   var modal = _ref.modal,
       closeModal = _ref.closeModal;
 
-  // debugger
   if (!modal) {
     return null;
   }
 
-  var component; // debugger
+  var component;
 
   switch (modal) {
     case 'back':
-      // debugger
       component = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_backproject_backproject__WEBPACK_IMPORTED_MODULE_3__["default"], null);
       break;
 
@@ -966,9 +931,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
- // import NavBarContainer from "../nav_bar/nav_bar_container";
-// import FooterContainer from '../footer/footer_container';
-// import { fetchRecentProject } from '../../actions/project'
+
 
 var MyProjects = /*#__PURE__*/function (_React$Component) {
   _inherits(MyProjects, _React$Component);
@@ -984,7 +947,6 @@ var MyProjects = /*#__PURE__*/function (_React$Component) {
   _createClass(MyProjects, [{
     key: "render",
     value: function render() {
-      // debugger
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "center index-title"
       }, "Your Current Projects:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
@@ -1046,7 +1008,6 @@ var navBar = function navBar(_ref) {
   var currentUser = _ref.currentUser,
       logout = _ref.logout,
       toggleShow = _ref.toggleShow;
-  // debugger
   var display = currentUser ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick() {
       return toggleShow();
@@ -1139,10 +1100,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var msp = function msp(state) {
-  // debugger
   return {
-    currentUser: state.session.currentUser // userLetter: state.session.currentUser.username[0].toUpperCase()
-
+    currentUser: state.session.currentUser
   };
 };
 
@@ -1218,10 +1177,8 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
 
     _classCallCheck(this, MasterForm);
 
-    _this = _super.call(this, props); // debugger
-
+    _this = _super.call(this, props);
     _this.state = {
-      // redirect: null,
       currentStep: 1,
       category: '',
       description: '',
@@ -1262,7 +1219,6 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     value: function handleSubmit(e) {
       var _this2 = this;
 
-      debugger;
       e.preventDefault();
       var author_id = store.getState().session.currentUser.id;
       var project = this.state;
@@ -1343,7 +1299,6 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
     key: "handleSubmitButton",
     value: function handleSubmitButton() {
       if (this.state.currentStep === 3) {
-        // debugger
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "project-bttn",
           disabled: this.state.location === "" || $(".false").length !== 0,
@@ -1353,15 +1308,10 @@ var MasterForm = /*#__PURE__*/function (_React$Component) {
       }
 
       return null;
-    } //fragment prevents additional DOM nodes from being generated when component renders
-
+    }
   }, {
     key: "render",
     value: function render() {
-      // if (this.state.redirect) {
-      //     debugger
-      //     return <Redirect to={this.state.redirect} />
-      // }
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "project-container"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1490,7 +1440,6 @@ var Page1 = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      // debugger
       if (this.props.currentStep !== 1) {
         return null;
       }
@@ -1674,18 +1623,13 @@ var Page3 = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Page3);
 
     return _super.call(this, props);
-  } // toggle(ele) {
-  //     // debugger
-  //     $(ele).toggleClass('false');
-  // }
-
+  }
 
   _createClass(Page3, [{
     key: "render",
     value: function render() {
       var _this = this;
 
-      // debugger
       if (this.props.currentStep !== 3) {
         return null;
       }
@@ -1945,8 +1889,7 @@ var Basics = /*#__PURE__*/function (_React$Component) {
   return Basics;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Basics); //handle submit
-//current step
+/* harmony default export */ __webpack_exports__["default"] = (Basics);
 
 /***/ }),
 
@@ -2008,33 +1951,16 @@ var EditShowProject = /*#__PURE__*/function (_React$Component) {
 
     _classCallCheck(this, EditShowProject);
 
-    _this = _super.call(this, props); // debugger
-
-    var current_proj = window.store.getState().entities.projects[parseInt(window.currentProj)]; // if (current_proj !== undefined) {
-
+    _this = _super.call(this, props);
+    var current_proj = window.store.getState().entities.projects[parseInt(window.currentProj)];
     _this.state = {
       currentStep: 1,
       name: current_proj.name,
       category: current_proj.category,
       location: current_proj.location,
       goal: current_proj.goal,
-      description: current_proj.description // currentStep: 1,
-      // name: null,
-      // category: null,
-      // location: null,
-      // goal: null,
-      // description: null
-
-    }; // else {
-    //     this.state = {
-    //         currentStep: 1,
-    //         name: current_proj.name,
-    //         category: current_proj.category,
-    //         location: current_proj.location,
-    //         goal: current_proj.goal,
-    //         description: current_proj.description
-    // }
-
+      description: current_proj.description
+    };
     _this._next = _this._next.bind(_assertThisInitialized(_this));
     _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
@@ -2044,7 +1970,6 @@ var EditShowProject = /*#__PURE__*/function (_React$Component) {
   _createClass(EditShowProject, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // debugger
       this.props.requestMyProjects(window.store.getState().session.currentUser.id);
     }
   }, {
@@ -2064,13 +1989,8 @@ var EditShowProject = /*#__PURE__*/function (_React$Component) {
       delete project["currentStep"];
       delete project["redirect"];
       project["author_id"] = author_id;
-      debugger;
       project["id"] = parseInt(this.props.match.params.projectId);
-      debugger;
-      this.props.patchProject(project); //  .then(action => {
-      // return(this.props.history.push(`/projects/${ author_id }/${action.project.id}`))
-      // })
-      //alert or some indication that its been saved
+      this.props.patchProject(project);
     }
   }, {
     key: "_next",
@@ -2115,7 +2035,6 @@ var EditShowProject = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // debugger
       if (window.store.getState().session.currentUser.id === parseInt(this.props.match.params.userId) && window.store.getState().entities.projects["received"]) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_basics__WEBPACK_IMPORTED_MODULE_4__["default"], {
           currentStep: this.state.currentStep,
@@ -2207,9 +2126,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
- // import NavBarContainer from "../nav_bar/nav_bar_container";
-// import FooterContainer from '../footer/footer_container';
-// import { fetchRecentProject } from '../../actions/project'
+
 
 var ShowProject = /*#__PURE__*/function (_React$Component) {
   _inherits(ShowProject, _React$Component);
@@ -2232,7 +2149,6 @@ var ShowProject = /*#__PURE__*/function (_React$Component) {
   _createClass(ShowProject, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      // debugger
       this.props.requestMyProjects(window.store.getState().session.currentUser.id);
       this.props.fetchProject(this.props.match.params.projectId);
     }
@@ -2245,9 +2161,7 @@ var ShowProject = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "handleEditButton",
     value: function handleEditButton() {
-      // debugger
       if (window.store.getState().entities.projects[this.props.match.params.projectId] !== undefined) {
-        // debugger
         window.currentProj = this.props.match.params.projectId;
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "project-bttn",
@@ -2259,24 +2173,11 @@ var ShowProject = /*#__PURE__*/function (_React$Component) {
       return null;
     }
   }, {
-    key: "handleBacking",
-    value: function handleBacking() {// e.preventDefault();
-      // const author_id = store.getState().session.currentUser.id
-      // const project = this.state;
-      // delete project["currentStep"];
-      // delete project["redirect"];
-      // project["author_id"] = author_id;
-      // debugger
-      // project["id"] = parseInt(this.props.match.params.projectId);
-      // debugger
-      // this.props.patchProject(project)
-    }
-  }, {
     key: "render",
     value: function render() {
       debugger;
       var current_proj = {};
-      current_proj = window.store.getState().entities.projects[parseInt(this.props.match.params.projectId)]; // debugger
+      current_proj = window.store.getState().entities.projects[parseInt(this.props.match.params.projectId)];
 
       if (current_proj !== undefined) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2337,13 +2238,7 @@ var mdp = function mdp(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(ShowProject)); //{/* {current_proj.author_id === window.store.getState().session.currentUser.id ? this.handleEditButton() : null} */}
-
-{
-  /* <button onClick={() => handleBacking()} className="bttn bttn-green bttn-large">
-                                 Back this project
-                             </button> */
-}
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(ShowProject));
 
 /***/ }),
 
@@ -2530,8 +2425,7 @@ var Login = /*#__PURE__*/function (_React$Component) {
   _createClass(Login, [{
     key: "handleSubmit",
     value: function handleSubmit(e) {
-      e.preventDefault(); // debugger
-
+      e.preventDefault();
       this.props.login(this.state);
     }
   }, {
@@ -2739,7 +2633,6 @@ var SignUp = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderErrors",
     value: function renderErrors() {
-      // debugger
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: "error-".concat(i)
@@ -2749,13 +2642,11 @@ var SignUp = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      // debugger
       this.props.removeErrors();
     }
   }, {
     key: "render",
     value: function render() {
-      // debugger
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_bar_nav_bar_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         id: "main-content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -2800,7 +2691,7 @@ var SignUp = /*#__PURE__*/function (_React$Component) {
   return SignUp;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (SignUp); //add removeErrors action to componentWillUnmount(){}
+/* harmony default export */ __webpack_exports__["default"] = (SignUp);
 
 /***/ }),
 
@@ -2827,7 +2718,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var msp = function msp(_ref) {
   var errors = _ref.errors;
-  // debugger
   return {
     errors: errors.session,
     login: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
@@ -2870,12 +2760,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import { requestMyProjects } from './actions/project';
-// import { fetchMyProjects } from './util/projects';
 
 document.addEventListener("DOMContentLoaded", function () {
-  var root = document.getElementById('root'); // debugger
-
+  var root = document.getElementById('root');
   var preloadedState = undefined;
 
   if (window.currentUser) {
@@ -2886,8 +2773,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState); //window objects
-
+  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState);
   window.store = store;
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
@@ -2984,7 +2870,6 @@ __webpack_require__.r(__webpack_exports__);
 var projectReducer = function projectReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  // debugger
   Object.freeze(state);
   var new_state = {};
 
@@ -2992,16 +2877,12 @@ var projectReducer = function projectReducer() {
     case _actions_project__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PROJECT"]:
       new_state[action.project.id] = action.project;
       return Object.assign({}, state, new_state);
-    // return new_state;
 
     case _actions_project__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_PROJECTS"]:
       var received = {
         received: true
       };
-      return Object.assign({}, new_state, action.projects, received);
-    // new_state["received"] = true;
-    // return new_state;
-    // return merge({}, action.projects);
+      return Object.assign({}, state, action.projects, received);
 
     default:
       return state;
@@ -3059,12 +2940,10 @@ var _nullUser = {
 var sessionReducer = function sessionReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _nullUser;
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  // debugger
   Object.freeze(state);
 
   switch (action.type) {
     case _actions_session__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
-      // return { id: action.currentUser.id };
       var currentUser = action.user;
       return Object.assign({}, {
         currentUser: currentUser
@@ -3143,11 +3022,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// import { USER_STUFF } from '../actions/session';
 var usersReducer = function usersReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
-  // debugger
   Object.freeze(state);
 
   switch (action.type) {
@@ -3244,7 +3121,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchMyProjects", function() { return fetchMyProjects; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addBacking", function() { return addBacking; });
 var createProject = function createProject(project) {
-  // debugger
   return $.ajax({
     method: "POST",
     url: "api/projects",
@@ -3281,7 +3157,6 @@ var fetchMyProjects = function fetchMyProjects(userId) {
   });
 };
 var addBacking = function addBacking(backing) {
-  // debugger
   return $.ajax({
     method: "POST",
     url: "/api/project_backers",
@@ -3377,8 +3252,7 @@ var deleteSession = function deleteSession() {
     method: "DELETE",
     url: "api/session"
   });
-}; //User Creation
-
+};
 var createUser = function createUser(user) {
   return $.ajax({
     method: "POST",

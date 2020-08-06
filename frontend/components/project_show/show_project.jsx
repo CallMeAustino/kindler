@@ -8,13 +8,6 @@ import NavBarContainer from '../nav_bar/nav_bar_container'
 import FooterContainer from '../footer/footer_container';
 import { openModal, closeModal } from '../../actions/project'
 
-
-// import NavBarContainer from "../nav_bar/nav_bar_container";
-// import FooterContainer from '../footer/footer_container';
-
-
-// import { fetchRecentProject } from '../../actions/project'
-
 class ShowProject extends React.Component {
     constructor(props) {
         super(props)
@@ -26,7 +19,7 @@ class ShowProject extends React.Component {
         this.handleEdit = this.handleEdit.bind(this)
     }
     componentDidMount(){
-        // debugger
+        
         this.props.requestMyProjects(window.store.getState().session.currentUser.id);
         this.props.fetchProject(this.props.match.params.projectId)
 
@@ -36,9 +29,9 @@ class ShowProject extends React.Component {
         this.props.history.push(`/projects/${this.props.match.params.userId}/${this.props.match.params.projectId}/edit`)
     }
     handleEditButton() {
-        // debugger
+        
         if (window.store.getState().entities.projects[this.props.match.params.projectId] !== undefined) {
-            // debugger
+            
             window.currentProj = this.props.match.params.projectId
             return (
                 <button
@@ -49,24 +42,13 @@ class ShowProject extends React.Component {
             )
         } return null;
     }
-    handleBacking() {
-        // e.preventDefault();
-        // const author_id = store.getState().session.currentUser.id
-        // const project = this.state;
-        // delete project["currentStep"];
-        // delete project["redirect"];
-        // project["author_id"] = author_id;
-        // debugger
-        // project["id"] = parseInt(this.props.match.params.projectId);
-        // debugger
-        // this.props.patchProject(project)
-    }
     render() {
         debugger
+        
         let current_proj = {};
         current_proj = window.store.getState().entities.projects[parseInt(this.props.match.params.projectId)]
        
-        // debugger
+        
         if (current_proj !== undefined) {
         return (
             <>
@@ -123,9 +105,3 @@ const mdp = dispatch => {
 }
 
 export default connect(msp,mdp)(ShowProject);
-
-//{/* {current_proj.author_id === window.store.getState().session.currentUser.id ? this.handleEditButton() : null} */}
-
-{/* <button onClick={() => handleBacking()} className="bttn bttn-green bttn-large">
-                                Back this project
-                            </button> */}

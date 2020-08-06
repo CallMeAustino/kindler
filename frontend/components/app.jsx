@@ -25,18 +25,7 @@ const App = () => {
         <AuthRoute path="/login" component={LoginContainer}/> 
         <AuthRoute path="/signup" component={SignUpContainer} /> 
     </Switch>
-        {/* <Redirect to="/404" /> */}
     </>
 };
 
 export default App;
-
-//Old Code im too scared to throw away 
-
-// import NavBarContainer from './nav_bar/nav_bar_container';
-// import FooterContainer from './footer/footer_container';
-{/* <Route path="/" component={NavBarContainer} /> */}
-{/* <Route path="/" component={FooterContainer} /> */}
-
-//currently, I have component routes rendering eachother to bypass the limitation of one invoked 'layout'. Now 
-// I am able to render one component at a time, by but adding full "pages" in each rendered container

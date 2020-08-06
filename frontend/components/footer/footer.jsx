@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const footer = () => {
-    // debugger
+    
     return <section style={{marginTop:150}}className="relative">
         <div id="subcategory_bar">
                 <div className="categories-container">

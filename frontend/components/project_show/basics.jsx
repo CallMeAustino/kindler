@@ -86,6 +86,3 @@ class Basics extends React.Component {
 }
 
 export default Basics;
-
-//handle submit
-//current step

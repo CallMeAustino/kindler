@@ -19,18 +19,18 @@ class BackProject extends React.Component {
     }
 
     update(e){
-        // debugger
+    debugger
         e.preventDefault();
         const obj = {
             project_id: parseInt(window.currentProj),
             backer_id: window.store.getState().session.currentUser.id,
             amount: parseInt(this.state.amount)
         }
-        // debugger
+        
         this.props.addBacker(obj)
     }
     render() {
-        // debugger
+        
         return (
             <div className="back-project-container">
                 <form onSubmit={(e) => this.update(e)} className="backing-form-box">

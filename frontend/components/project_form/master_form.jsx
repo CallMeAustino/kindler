@@ -8,9 +8,8 @@ import { Link, Redirect } from 'react-router-dom';
 class MasterForm extends React.Component {
     constructor(props) {
         super(props) 
-        // debugger
+        
         this.state = { 
-            // redirect: null,
             currentStep: 1,
             category: '',
             description: '',
@@ -42,7 +41,7 @@ class MasterForm extends React.Component {
         $(ele).toggleClass('false');
     }
     handleSubmit(e) {
-        debugger
+        
         e.preventDefault();
         const author_id = store.getState().session.currentUser.id
         const project = this.state;
@@ -126,7 +125,7 @@ class MasterForm extends React.Component {
 
     handleSubmitButton(){
         if(this.state.currentStep === 3) {
-            // debugger
+            
             return (
                 <button
                     className="project-bttn"
@@ -137,12 +136,7 @@ class MasterForm extends React.Component {
             )   
         } return null;
     }
-    //fragment prevents additional DOM nodes from being generated when component renders
     render() {
-        // if (this.state.redirect) {
-        //     debugger
-        //     return <Redirect to={this.state.redirect} />
-        // }
         return <>
         <div className="project-container">
             <div className="project-header">

@@ -4,16 +4,16 @@ import { connect } from 'react-redux'
 import BackProject from '../backproject/backproject'
 
 function Modal({modal, closeModal}) {
-    // debugger
+    
     if (!modal) {
         return null;
     }
 
     let component;
-    // debugger
+    
     switch (modal) {
         case 'back':
-            // debugger
+            
             component = <BackProject />;
             break;
         default:

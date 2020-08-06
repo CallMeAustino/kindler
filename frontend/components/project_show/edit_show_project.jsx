@@ -10,9 +10,8 @@ import { patchProject } from '../../actions/project';
 class EditShowProject extends React.Component {
     constructor(props) {
         super(props)
-        // debugger
+        
         const current_proj = window.store.getState().entities.projects[parseInt(window.currentProj)]
-        // if (current_proj !== undefined) {
         this.state = {
                 currentStep: 1,
                 name: current_proj.name,
@@ -20,29 +19,14 @@ class EditShowProject extends React.Component {
                 location: current_proj.location,
                 goal: current_proj.goal,
                 description: current_proj.description
-            // currentStep: 1,
-            // name: null,
-            // category: null,
-            // location: null,
-            // goal: null,
-            // description: null
         }
         
-        // else {
-        //     this.state = {
-        //         currentStep: 1,
-        //         name: current_proj.name,
-        //         category: current_proj.category,
-        //         location: current_proj.location,
-        //         goal: current_proj.goal,
-        //         description: current_proj.description
-        // }
         this._next = this._next.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount() {
-        // debugger
+        
         this.props.requestMyProjects(window.store.getState().session.currentUser.id);
     }
     componentDidUpdate() {
@@ -57,14 +41,10 @@ class EditShowProject extends React.Component {
         delete project["currentStep"];
         delete project["redirect"];
         project["author_id"] = author_id;
-        debugger
+        
         project["id"] = parseInt(this.props.match.params.projectId);
-        debugger
+        
         this.props.patchProject(project)
-        //  .then(action => {
-            // return(this.props.history.push(`/projects/${ author_id }/${action.project.id}`))
-        // })
-        //alert or some indication that its been saved
     }
     _next() {
         let currentStep = this.state.currentStep;
@@ -106,7 +86,7 @@ class EditShowProject extends React.Component {
             )
     }
     render() {
-        // debugger
+        
         if (window.store.getState().session.currentUser.id === parseInt(this.props.match.params.userId) && window.store.getState().entities.projects["received"]) {
             return (
                 <>

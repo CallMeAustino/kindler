@@ -4,12 +4,8 @@ class Page3 extends React.Component {
     constructor(props) {
         super(props)
     }
-    // toggle(ele) {
-    //     // debugger
-    //     $(ele).toggleClass('false');
-    // }
     render() {
-        // debugger
+        
         if (this.props.currentStep !== 3) {
             return null
         }

@@ -13,8 +13,6 @@ export const deleteSession = () => {
     })
 }
 
-//User Creation
-
 export const createUser = (user) => {
     return $.ajax({
         method: `POST`,

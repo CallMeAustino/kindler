@@ -10,7 +10,7 @@ class Home extends React.Component {
         super(props)
     }
     componentDidMount(){
-        // debugger
+        
         if (window.store.getState().session.currentUser !== null) {
             this.props.requestMyProjects(window.store.getState().session.currentUser.id)
         }
@@ -20,7 +20,7 @@ class Home extends React.Component {
     }
     
     render(){
-        // debugger
+        
         return <section className="main-content">
             <div className="categories">
                 <nav className="flex justify-center">

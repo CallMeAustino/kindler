@@ -8,7 +8,7 @@ export const CLOSE_MODAL = 'CLOSE_MODAL';
 export const RECEIVE_BACKING = 'RECEIVE_BACKING';
 
 export const openModal = modal => {
-    // debugger
+    
     return {
         type: OPEN_MODAL,
         modal
@@ -16,7 +16,7 @@ export const openModal = modal => {
 }
 
 export const closeModal = modal => {
-    // debugger
+    
     return {
         type: CLOSE_MODAL,
         modal
@@ -24,7 +24,7 @@ export const closeModal = modal => {
 }
 
 const receiveProject = project => {
-    // debugger
+    debugger
     return {
         type: RECEIVE_PROJECT,
         project
@@ -32,7 +32,7 @@ const receiveProject = project => {
 }
 
 const receiveProjects = projects => {
-    // debugger
+    debugger
     return {
         type: RECEIVE_PROJECTS,
         projects
@@ -40,7 +40,7 @@ const receiveProjects = projects => {
 }
 
 const receiveBacking = backing => {
-    // debugger
+    
     return {
         type: RECEIVE_BACKING,
         backing
@@ -48,7 +48,7 @@ const receiveBacking = backing => {
 }
 
 const receiveErrors = errors => {
-    // debugger
+    
     return {
         type: RECEIVE_PROJECT_ERRORS,
         errors
@@ -66,7 +66,7 @@ export const createNewProject = project => dispatch => {
 }
 
 export const requestMyProjects = userId => dispatch => {
-    // debugger
+    
     fetchMyProjects(userId).then(projects =>
         (dispatch(receiveProjects(projects))
         ), err => (
@@ -75,7 +75,7 @@ export const requestMyProjects = userId => dispatch => {
 }
 
 export const patchProject = project => dispatch => {
-    // debugger
+    
     updateProject(project).then(project => 
         (dispatch(receiveProject(project))
         ), err => (
@@ -84,7 +84,7 @@ export const patchProject = project => dispatch => {
 }
 
 export const requestProject = projectId => dispatch => {
-    // debugger
+    
     fetchProject(projectId).then(project =>
         (dispatch(receiveProject(project))
         ), err => (
