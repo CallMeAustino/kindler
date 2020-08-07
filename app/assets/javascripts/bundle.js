@@ -698,7 +698,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "https://project-kindler.herokuapp.com/?#/projects/2/3",
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/6",
         className: "three-five",
         style: {
           borderRight: "1px solid lightgray",
@@ -729,7 +729,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
           color: "#656969"
         }
       }, "RECOMMENDED FOR YOU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/4",
         style: {
           minHeight: 70,
           borderBottom: "1px solid lightgray"
@@ -762,7 +762,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
           marginLeft: 10
         }, _defineProperty(_ref2, "marginTop", 5), _defineProperty(_ref2, "color", "#656969"), _defineProperty(_ref2, "fontWeight", "lighter"), _ref2)
       }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/5",
         style: {
           minHeight: 70,
           borderBottom: "1px solid lightgray"
@@ -791,7 +791,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
           marginLeft: 10
         }, _defineProperty(_ref4, "marginTop", 5), _defineProperty(_ref4, "color", "#656969"), _defineProperty(_ref4, "fontWeight", "lighter"), _ref4)
       }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/3",
         style: {
           minHeight: 70
         },
@@ -2313,6 +2313,9 @@ var ShowProject = /*#__PURE__*/function (_React$Component) {
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, current_proj.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, current_proj.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
           className: "flex"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          style: {
+            minHeight: 300
+          },
           className: "two-three"
         }, "image goes here"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
           className: "one-three"

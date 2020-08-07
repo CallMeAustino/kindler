@@ -62,7 +62,7 @@ class ShowProject extends React.Component {
                         <p>{current_proj.description}</p>
                     </section>
                     <section className="flex">
-                        <div className="two-three">image goes here</div>
+                        <div style={{minHeight:300}} className="two-three">image goes here</div>
                         <section className="one-three">
                             <div>
                                 <h3 className="pledged">${current_proj.sum}</h3>
