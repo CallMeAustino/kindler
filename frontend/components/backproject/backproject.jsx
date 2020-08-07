@@ -34,19 +34,21 @@ class BackProject extends React.Component {
         return (
             <div className="back-project-container">
                 <form onSubmit={(e) => this.update(e)} className="backing-form-box">
-                    Thanks for backing!
-                    <br/>
                     <div onClick={this.props.closeModal} className="close-x">X</div>
-                    <div className="backing-form">
-                        <label>Backing Amount:
-                            <input type="text"
-                                value={this.state.amount}
-                                onChange={(e) => this.handleChange(e,'amount')}
-                                className="backing-input"
-                            />
-                        </label>
-                    </div>
-                    <input className="backing-submit" type="submit" value="Confirm"/>
+                    <section className="flex column center">
+                        <h1>Thanks for your support!</h1>
+                        <div className="backing-form">
+                            <label>Backing Amount:   
+                                <input type="text"
+                                    placeholder="No amount is too small!"
+                                    value={this.state.amount}
+                                    onChange={(e) => this.handleChange(e,'amount')}
+                                    className="backing-input"
+                                />
+                            </label>
+                        </div>
+                        <input style={{maxWidth:200, marginTop:20, }} className="bttn bttn-green bttn-large center" type="submit" value="Confirm"/>
+                    </section>
                 </form>
             </div>
         )

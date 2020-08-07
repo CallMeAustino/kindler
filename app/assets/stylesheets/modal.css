@@ -25,6 +25,8 @@
     padding: 20px;
     background: white;
     position: relative;
+    min-height: 200px;
+    min-width: 600px;
 }
 
 .backing-form {

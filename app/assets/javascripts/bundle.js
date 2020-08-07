@@ -456,23 +456,30 @@ var BackProject = /*#__PURE__*/function (_React$Component) {
           return _this2.update(e);
         },
         className: "backing-form-box"
-      }, "Thanks for backing!", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         onClick: this.props.closeModal,
         className: "close-x"
-      }, "X"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "X"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "flex column center"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Thanks for your support!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "backing-form"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Backing Amount:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
+        placeholder: "No amount is too small!",
         value: this.state.amount,
         onChange: function onChange(e) {
           return _this2.handleChange(e, 'amount');
         },
         className: "backing-input"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "backing-submit",
+        style: {
+          maxWidth: 200,
+          marginTop: 20
+        },
+        className: "bttn bttn-green bttn-large center",
         type: "submit",
         value: "Confirm"
-      })));
+      }))));
     }
   }]);
 
