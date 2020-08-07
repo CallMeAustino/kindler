@@ -19,7 +19,7 @@ class BackProject extends React.Component {
     }
 
     update(e){
-    debugger
+    
         e.preventDefault();
         const obj = {
             project_id: parseInt(window.currentProj),

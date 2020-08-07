@@ -24,7 +24,7 @@ export const closeModal = modal => {
 }
 
 const receiveProject = project => {
-    debugger
+    
     return {
         type: RECEIVE_PROJECT,
         project
@@ -32,7 +32,7 @@ const receiveProject = project => {
 }
 
 const receiveProjects = projects => {
-    debugger
+    
     return {
         type: RECEIVE_PROJECTS,
         projects

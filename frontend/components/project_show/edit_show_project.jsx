@@ -75,6 +75,17 @@ class EditShowProject extends React.Component {
             )
         }
     }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
     handleSubmitButton() {
             return (
                 <button 
@@ -107,6 +118,7 @@ class EditShowProject extends React.Component {
                     <div style={{ padding: 20 }} className="flex">
                     {this.nextButton()}
                     {this.handleSubmitButton()}
+                    {this.renderErrors()}
                 </div>
                 </>
             )
@@ -120,6 +132,7 @@ class EditShowProject extends React.Component {
 
 const msp = state => {
     return {
+        errors: state.errors.session
     }
 }
 

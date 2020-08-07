@@ -257,15 +257,13 @@ textarea:focus {
 }
 
 .three-five {
-    flex-basis: 60%;
-    background-color: darkgray;
+    flex-basis: 55%;
     padding: 20px;
     margin: 20px;
 }
 
 .two-five { 
     flex-basis: 40%;
-    background-color: lightgoldenrodyellow;
     padding: 20px;
     margin: 20px;
 }

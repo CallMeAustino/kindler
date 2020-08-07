@@ -130,7 +130,6 @@ var closeModal = function closeModal(modal) {
 };
 
 var receiveProject = function receiveProject(project) {
-  debugger;
   return {
     type: RECEIVE_PROJECT,
     project: project
@@ -138,7 +137,6 @@ var receiveProject = function receiveProject(project) {
 };
 
 var receiveProjects = function receiveProjects(projects) {
-  debugger;
   return {
     type: RECEIVE_PROJECTS,
     projects: projects
@@ -435,7 +433,6 @@ var BackProject = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "update",
     value: function update(e) {
-      debugger;
       e.preventDefault();
       var obj = {
         project_id: parseInt(window.currentProj),
@@ -641,6 +638,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -688,6 +687,8 @@ var Home = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _ref, _ref2, _ref3, _ref4, _ref5;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "main-content"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -696,26 +697,129 @@ var Home = /*#__PURE__*/function (_React$Component) {
         className: "flex justify-center"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "flex"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "three-five"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/3",
+        className: "three-five",
+        style: {
+          borderRight: "1px solid lightgray",
+          paddingRight: 0
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "FEATURED PROJECT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: "85%",
+          maxWidth: "85%"
+        },
+        src: "https://miro.medium.com/max/1072/1*0MFdD6_5keqFvIiEX4nrWw.jpeg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          width: "85%",
+          backgroundColor: "#037362",
+          minHeight: 15
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jin's Bubble Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Bubble Tea in the heart of Brooklyn, served cold and fresh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "two-five"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "RECOMMENDED FOR YOU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://target.scene7.com/is/image/Target/GUEST_c21c029c-7fcf-489e-9e85-feedca15982e?wid=488&hei=488&fmt=pjpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "JinPhone 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref, "marginTop", 5), _defineProperty(_ref, "color", "#037362"), _defineProperty(_ref, "fontWeight", "bold"), _ref)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref2 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref2, "marginTop", 5), _defineProperty(_ref2, "color", "#656969"), _defineProperty(_ref2, "fontWeight", "lighter"), _ref2)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/74E8/production/_112482992__111703877_gettyimages-1128870980.jpg",
+        style: {
+          maxWidth: "30%",
+          marginBottom: 20
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "The Jin York Times"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref3 = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref3, "marginTop", 5), _defineProperty(_ref3, "color", "#037362"), _defineProperty(_ref3, "fontWeight", "bold"), _ref3)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref4 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref4, "marginTop", 5), _defineProperty(_ref4, "color", "#656969"), _defineProperty(_ref4, "fontWeight", "lighter"), _ref4)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "",
         style: {
           minHeight: 70
         },
-        className: "bg-lightgreen mb-20"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/15/0/FNK_Korean-Grilled-Beef-Bulgogi-H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557961246095.jpeg",
         style: {
-          minHeight: 70
-        },
-        className: "bg-lightgreen mb-20"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         style: {
-          minHeight: 70
-        },
-        className: "bg-lightgreen mb-20"
-      }))));
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "Lauren's Greatest Korean Recipes!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 5,
+          color: "#037362",
+          fontWeight: "bold"
+        }
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref5 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref5, "marginTop", 5), _defineProperty(_ref5, "color", "#656969"), _defineProperty(_ref5, "fontWeight", "lighter"), _ref5)
+      }, "By Lauren"))))));
     }
   }]);
 
@@ -961,12 +1065,14 @@ var MyProjects = /*#__PURE__*/function (_React$Component) {
           listStyleType: "none"
         }
       }, Object.values(this.props.projects).map(function (project, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: idx,
-          className: "bespoke-hover-tranisition-bottom-bar mb-20"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
-          to: "/projects/".concat(project.author_id, "/").concat(project.id)
-        }, project.description));
+        if (window.store.getState().session.currentUser.id === project.author_id) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+            key: idx,
+            className: "bespoke-hover-tranisition-bottom-bar mb-20"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+            to: "/projects/".concat(project.author_id, "/").concat(project.id)
+          }, project.description));
+        }
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer_container__WEBPACK_IMPORTED_MODULE_5__["default"], null));
     }
   }]);
@@ -2030,6 +2136,15 @@ var EditShowProject = /*#__PURE__*/function (_React$Component) {
       }
     }
   }, {
+    key: "renderErrors",
+    value: function renderErrors() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: "error-".concat(i)
+        }, error);
+      }));
+    }
+  }, {
     key: "handleSubmitButton",
     value: function handleSubmitButton() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2056,7 +2171,7 @@ var EditShowProject = /*#__PURE__*/function (_React$Component) {
             padding: 20
           },
           className: "flex"
-        }, this.nextButton(), this.handleSubmitButton()));
+        }, this.nextButton(), this.handleSubmitButton(), this.renderErrors()));
       } else {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Redirect"], {
           to: "/projects/".concat(this.props.match.params.userId, "/").concat(this.props.match.params.projectId)
@@ -2069,7 +2184,9 @@ var EditShowProject = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 var msp = function msp(state) {
-  return {};
+  return {
+    errors: state.errors.session
+  };
 };
 
 var mdp = function mdp(dispatch) {
@@ -2182,7 +2299,6 @@ var ShowProject = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      debugger;
       var current_proj = {};
       current_proj = window.store.getState().entities.projects[parseInt(this.props.match.params.projectId)];
 

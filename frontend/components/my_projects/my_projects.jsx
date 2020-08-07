@@ -19,7 +19,9 @@ class MyProjects extends React.Component {
                     <h1 className="center index-title">Your Current Projects:</h1>
                     <ul style={{listStyleType:"none"}}>
                         {Object.values(this.props.projects).map((project, idx) => {
-                            return <li key={idx} className="bespoke-hover-tranisition-bottom-bar mb-20"><Link to={`/projects/${project.author_id}/${project.id}`}>{project.description}</Link></li>
+                            if (window.store.getState().session.currentUser.id === project.author_id) {
+                                return <li key={idx} className="bespoke-hover-tranisition-bottom-bar mb-20"><Link to={`/projects/${project.author_id}/${project.id}`}>{project.description}</Link></li>
+                            }
                         })}
                     </ul>
                     <FooterContainer />
