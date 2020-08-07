@@ -19,3 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.store = store
     ReactDOM.render(<Root store={store}/>, root)
 })
+
+//missing ability to click profiles to see all user projects
+//missing search
+//updating backers is not working on live site (422 error)

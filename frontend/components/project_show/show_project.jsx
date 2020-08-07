@@ -43,8 +43,9 @@ class ShowProject extends React.Component {
         } return null;
     }
     render() {
-        
-        
+        if (window.store.getState().entities.projects[this.props.match.params.projectId] !== undefined) {
+        window.currentProj = this.props.match.params.projectId
+        }
         let current_proj = {};
         current_proj = window.store.getState().entities.projects[parseInt(this.props.match.params.projectId)]
        

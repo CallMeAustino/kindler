@@ -2299,6 +2299,10 @@ var ShowProject = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      if (window.store.getState().entities.projects[this.props.match.params.projectId] !== undefined) {
+        window.currentProj = this.props.match.params.projectId;
+      }
+
       var current_proj = {};
       current_proj = window.store.getState().entities.projects[parseInt(this.props.match.params.projectId)];
 
@@ -2904,7 +2908,9 @@ document.addEventListener("DOMContentLoaded", function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
   }), root);
-});
+}); //missing ability to click profiles to see all user projects
+//missing search
+//updating backers is not working on live site (422 error)
 
 /***/ }),
 
