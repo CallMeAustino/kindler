@@ -24,7 +24,6 @@ class Home extends React.Component {
         return <section className="main-content">
             <div className="categories">
                 <nav className="flex justify-center">
-
                 </nav>
             </div>
 
@@ -65,8 +64,14 @@ class Home extends React.Component {
                     </a>
                 </section>
             </div>
+            <a href="https://project-kindler.herokuapp.com/?#/projects/1/1"style={{ display: "flex", justifyContent: "center", marginTop: 20, borderTop: "1px solid lightgray", paddingTop:40}}>
+                <img style={{maxHeight: 300, marginRight: 10}} src="https://action.scholastic.com/content/dam/classroom-magazines/action/issues/2019-20/040120/superman-becomes-a-star-superheroes-take-over-the-world/07-ACT-040120-p26-PT-Superman-TN.jpg"></img>
+                <div style={{ display: "flex", flexDirection: "column", marginLeft:10, paddingLeft:10, borderLeft: "10px solid rgb(3, 115, 98)"}}>
+                    <p style={{fontWeight:"bold"}}>Superman Returns!</p>
+                    <p>Superman Returns in this action packed thriller! 슈퍼맨이 돌아왔다!</p>
+                </div>
+            </a>
         </section>
     }
 }
-
 export default Home;

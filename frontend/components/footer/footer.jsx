@@ -23,22 +23,26 @@ const footer = () => {
                 <div id="about">
                     <h5>ABOUT</h5>
                     <ul>
-                        <li>About Me</li>
-                        <li>Jobs</li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://docs.google.com/document/d/1H3U5DY_PQoa4I53AB_Jv5ncSy34oRfPT5Qjm03JmoYU/edit?usp=sharing">Resume</a></li>
                     </ul>
                 </div>
                 <div id="support">
                     <h5>SUPPORT</h5>
                     <ul>
-                        <li>Lorem Ipsum</li>
-                        <li>Cohort Mates</li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://docs.google.com/document/d/1H3U5DY_PQoa4I53AB_Jv5ncSy34oRfPT5Qjm03JmoYU/edit?usp=sharing">Lauren Lee</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://www.linkedin.com/in/jlin2235/">Jin Lin</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://www.linkedin.com/in/daniel-guardado-106867197/">Daniel Guardado</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://callmeaustino.github.io/silica/">Mackenzie Young</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://www.linkedin.com/in/naraskim/">Nara Lee</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://www.linkedin.com/in/connor-j-murphy/">Connor Murphy</a></li>
                     </ul>
                 </div>
                 <div id="more">
                     <h5>MORE FROM AUSTIN</h5>
                     <ul>
-                        <li>Other Apps</li>
-                        <li>Github</li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://callmeaustino.github.io/silica/">Silica</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="http://www.rpskill.com/#/">RPSkill</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://github.com/CallMeAustino">Github</a></li>
                     </ul>
                 </div>
             </div>
