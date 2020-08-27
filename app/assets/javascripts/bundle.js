@@ -306,15 +306,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _categories_comics_illustration_comics_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./categories/comics-illustration/comics_container */ "./frontend/components/categories/comics-illustration/comics_container.jsx");
 /* harmony import */ var _categories_design_tech_design_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./categories/design-tech/design_container */ "./frontend/components/categories/design-tech/design_container.jsx");
 /* harmony import */ var _categories_film_film_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./categories/film/film_container */ "./frontend/components/categories/film/film_container.jsx");
-/* harmony import */ var _categories_film_film_container__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_categories_film_film_container__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _categories_food_craft_food_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./categories/food-craft/food_container */ "./frontend/components/categories/food-craft/food_container.jsx");
-/* harmony import */ var _categories_food_craft_food_container__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_categories_food_craft_food_container__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _categories_games_games_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./categories/games/games_container */ "./frontend/components/categories/games/games_container.jsx");
-/* harmony import */ var _categories_games_games_container__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_categories_games_games_container__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _categories_music_music_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./categories/music/music_container */ "./frontend/components/categories/music/music_container.jsx");
-/* harmony import */ var _categories_music_music_container__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_categories_music_music_container__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _categories_publishing_publishing_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./categories/publishing/publishing_container */ "./frontend/components/categories/publishing/publishing_container.jsx");
-/* harmony import */ var _categories_publishing_publishing_container__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_categories_publishing_publishing_container__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _session_login_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./session/login_container */ "./frontend/components/session/login_container.jsx");
 /* harmony import */ var _session_signup_container__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./session/signup_container */ "./frontend/components/session/signup_container.jsx");
 /* harmony import */ var _learn_learn_container__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./learn/learn_container */ "./frontend/components/learn/learn_container.jsx");
@@ -368,23 +363,23 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_17__["default"], {
     exact: true,
     path: "/film",
-    component: _categories_film_film_container__WEBPACK_IMPORTED_MODULE_5___default.a
+    component: _categories_film_film_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_17__["default"], {
     exact: true,
     path: "/food-craft",
-    component: _categories_food_craft_food_container__WEBPACK_IMPORTED_MODULE_6___default.a
+    component: _categories_food_craft_food_container__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_17__["default"], {
     exact: true,
     path: "/games",
-    component: _categories_games_games_container__WEBPACK_IMPORTED_MODULE_7___default.a
+    component: _categories_games_games_container__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_17__["default"], {
     exact: true,
     path: "/music",
-    component: _categories_music_music_container__WEBPACK_IMPORTED_MODULE_8___default.a
+    component: _categories_music_music_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_header_util__WEBPACK_IMPORTED_MODULE_17__["default"], {
     exact: true,
     path: "/publishing",
-    component: _categories_publishing_publishing_container__WEBPACK_IMPORTED_MODULE_9___default.a
+    component: _categories_publishing_publishing_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_18__["ProtectedRoute"], {
     exact: true,
     path: "/myprojects",
@@ -1416,14 +1411,540 @@ var mdp = function mdp(dispatch) {
 
 /***/ }),
 
+/***/ "./frontend/components/categories/film/film.jsx":
+/*!******************************************************!*\
+  !*** ./frontend/components/categories/film/film.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Film = /*#__PURE__*/function (_React$Component) {
+  _inherits(Film, _React$Component);
+
+  var _super = _createSuper(Film);
+
+  function Film(props) {
+    _classCallCheck(this, Film);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Film, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (window.store.getState().session.currentUser !== null) {
+        this.props.requestMyProjects(window.store.getState().session.currentUser.id);
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var _ref, _ref2, _ref3, _ref4, _ref5;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "main-content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "flex justify-center"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          margin: "20px auto"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        style: {
+          fontWeight: "lighter"
+        }
+      }, "Film"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        style: {
+          fontWeight: "lighter",
+          color: "darkgray"
+        }
+      }, "Join forces with the intrepid filmmakers and festival creators changing the way stories get told on screen."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/6",
+        className: "three-five",
+        style: {
+          borderRight: "1px solid lightgray",
+          paddingRight: 0
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "FEATURED PROJECT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: "85%",
+          maxWidth: "85%"
+        },
+        src: "https://miro.medium.com/max/1072/1*0MFdD6_5keqFvIiEX4nrWw.jpeg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          width: "85%",
+          backgroundColor: "#037362",
+          minHeight: 15
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jin's Bubble Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Bubble Tea in the heart of Brooklyn, served cold and fresh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "two-five"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "RECOMMENDED FOR YOU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/4",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://target.scene7.com/is/image/Target/GUEST_c21c029c-7fcf-489e-9e85-feedca15982e?wid=488&hei=488&fmt=pjpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "JinPhone 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref, "marginTop", 5), _defineProperty(_ref, "color", "#037362"), _defineProperty(_ref, "fontWeight", "bold"), _ref)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref2 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref2, "marginTop", 5), _defineProperty(_ref2, "color", "#656969"), _defineProperty(_ref2, "fontWeight", "lighter"), _ref2)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/5",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/74E8/production/_112482992__111703877_gettyimages-1128870980.jpg",
+        style: {
+          maxWidth: "30%",
+          marginBottom: 20
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "The Jin York Times"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref3 = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref3, "marginTop", 5), _defineProperty(_ref3, "color", "#037362"), _defineProperty(_ref3, "fontWeight", "bold"), _ref3)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref4 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref4, "marginTop", 5), _defineProperty(_ref4, "color", "#656969"), _defineProperty(_ref4, "fontWeight", "lighter"), _ref4)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/3",
+        style: {
+          minHeight: 70
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/15/0/FNK_Korean-Grilled-Beef-Bulgogi-H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557961246095.jpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "Lauren's Greatest Korean Recipes!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 5,
+          color: "#037362",
+          fontWeight: "bold"
+        }
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref5 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref5, "marginTop", 5), _defineProperty(_ref5, "color", "#656969"), _defineProperty(_ref5, "fontWeight", "lighter"), _ref5)
+      }, "By Lauren"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/1",
+        style: {
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 20,
+          borderTop: "1px solid lightgray",
+          paddingTop: 40
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: 300,
+          marginRight: 10
+        },
+        src: "https://action.scholastic.com/content/dam/classroom-magazines/action/issues/2019-20/040120/superman-becomes-a-star-superheroes-take-over-the-world/07-ACT-040120-p26-PT-Superman-TN.jpg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          marginLeft: 10,
+          paddingLeft: 10,
+          borderLeft: "10px solid rgb(3, 115, 98)"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: "bold"
+        }
+      }, "Superman Returns!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Superman Returns in this action packed thriller! \uC288\uD37C\uB9E8\uC774 \uB3CC\uC544\uC654\uB2E4!"))));
+    }
+  }]);
+
+  return Film;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Film);
+
+/***/ }),
+
 /***/ "./frontend/components/categories/film/film_container.jsx":
 /*!****************************************************************!*\
   !*** ./frontend/components/categories/film/film_container.jsx ***!
   \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _film__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./film */ "./frontend/components/categories/film/film.jsx");
+/* harmony import */ var _actions_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../actions/project */ "./frontend/actions/project.js");
 
 
+
+
+
+var msp = function msp(state) {
+  return {
+    currentUser: state.session.currentUser
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    requestMyProjects: function requestMyProjects(userId) {
+      return dispatch(Object(_actions_project__WEBPACK_IMPORTED_MODULE_3__["requestMyProjects"])(userId));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(_film__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/categories/food-craft/food.jsx":
+/*!************************************************************!*\
+  !*** ./frontend/components/categories/food-craft/food.jsx ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Food = /*#__PURE__*/function (_React$Component) {
+  _inherits(Food, _React$Component);
+
+  var _super = _createSuper(Food);
+
+  function Food(props) {
+    _classCallCheck(this, Food);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Food, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (window.store.getState().session.currentUser !== null) {
+        this.props.requestMyProjects(window.store.getState().session.currentUser.id);
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var _ref, _ref2, _ref3, _ref4, _ref5;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "main-content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "flex justify-center"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          margin: "20px auto"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        style: {
+          fontWeight: "lighter"
+        }
+      }, "Food & Craft"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        style: {
+          fontWeight: "lighter",
+          color: "darkgray"
+        }
+      }, "See how artisans and entrepreneurs are using Kickstarter to break new ground in food, fashion, and crafts."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/6",
+        className: "three-five",
+        style: {
+          borderRight: "1px solid lightgray",
+          paddingRight: 0
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "FEATURED PROJECT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: "85%",
+          maxWidth: "85%"
+        },
+        src: "https://miro.medium.com/max/1072/1*0MFdD6_5keqFvIiEX4nrWw.jpeg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          width: "85%",
+          backgroundColor: "#037362",
+          minHeight: 15
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jin's Bubble Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Bubble Tea in the heart of Brooklyn, served cold and fresh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "two-five"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "RECOMMENDED FOR YOU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/4",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://target.scene7.com/is/image/Target/GUEST_c21c029c-7fcf-489e-9e85-feedca15982e?wid=488&hei=488&fmt=pjpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "JinPhone 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref, "marginTop", 5), _defineProperty(_ref, "color", "#037362"), _defineProperty(_ref, "fontWeight", "bold"), _ref)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref2 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref2, "marginTop", 5), _defineProperty(_ref2, "color", "#656969"), _defineProperty(_ref2, "fontWeight", "lighter"), _ref2)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/5",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/74E8/production/_112482992__111703877_gettyimages-1128870980.jpg",
+        style: {
+          maxWidth: "30%",
+          marginBottom: 20
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "The Jin York Times"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref3 = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref3, "marginTop", 5), _defineProperty(_ref3, "color", "#037362"), _defineProperty(_ref3, "fontWeight", "bold"), _ref3)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref4 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref4, "marginTop", 5), _defineProperty(_ref4, "color", "#656969"), _defineProperty(_ref4, "fontWeight", "lighter"), _ref4)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/3",
+        style: {
+          minHeight: 70
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/15/0/FNK_Korean-Grilled-Beef-Bulgogi-H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557961246095.jpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "Lauren's Greatest Korean Recipes!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 5,
+          color: "#037362",
+          fontWeight: "bold"
+        }
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref5 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref5, "marginTop", 5), _defineProperty(_ref5, "color", "#656969"), _defineProperty(_ref5, "fontWeight", "lighter"), _ref5)
+      }, "By Lauren"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/1",
+        style: {
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 20,
+          borderTop: "1px solid lightgray",
+          paddingTop: 40
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: 300,
+          marginRight: 10
+        },
+        src: "https://action.scholastic.com/content/dam/classroom-magazines/action/issues/2019-20/040120/superman-becomes-a-star-superheroes-take-over-the-world/07-ACT-040120-p26-PT-Superman-TN.jpg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          marginLeft: 10,
+          paddingLeft: 10,
+          borderLeft: "10px solid rgb(3, 115, 98)"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: "bold"
+        }
+      }, "Superman Returns!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Superman Returns in this action packed thriller! \uC288\uD37C\uB9E8\uC774 \uB3CC\uC544\uC654\uB2E4!"))));
+    }
+  }]);
+
+  return Food;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Food);
 
 /***/ }),
 
@@ -1431,10 +1952,286 @@ var mdp = function mdp(dispatch) {
 /*!**********************************************************************!*\
   !*** ./frontend/components/categories/food-craft/food_container.jsx ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _food__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./food */ "./frontend/components/categories/food-craft/food.jsx");
+/* harmony import */ var _actions_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../actions/project */ "./frontend/actions/project.js");
 
 
+
+
+
+var msp = function msp(state) {
+  return {
+    currentUser: state.session.currentUser
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    requestMyProjects: function requestMyProjects(userId) {
+      return dispatch(Object(_actions_project__WEBPACK_IMPORTED_MODULE_3__["requestMyProjects"])(userId));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(_food__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/categories/games/games.jsx":
+/*!********************************************************!*\
+  !*** ./frontend/components/categories/games/games.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Games = /*#__PURE__*/function (_React$Component) {
+  _inherits(Games, _React$Component);
+
+  var _super = _createSuper(Games);
+
+  function Games(props) {
+    _classCallCheck(this, Games);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Games, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (window.store.getState().session.currentUser !== null) {
+        this.props.requestMyProjects(window.store.getState().session.currentUser.id);
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var _ref, _ref2, _ref3, _ref4, _ref5;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "main-content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "flex justify-center"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          margin: "20px auto"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        style: {
+          fontWeight: "lighter"
+        }
+      }, "Games"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        style: {
+          fontWeight: "lighter",
+          color: "darkgray"
+        }
+      }, "From tabletop adventures to beloved revivals, discover the projects forging the future of gameplay."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/6",
+        className: "three-five",
+        style: {
+          borderRight: "1px solid lightgray",
+          paddingRight: 0
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "FEATURED PROJECT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: "85%",
+          maxWidth: "85%"
+        },
+        src: "https://miro.medium.com/max/1072/1*0MFdD6_5keqFvIiEX4nrWw.jpeg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          width: "85%",
+          backgroundColor: "#037362",
+          minHeight: 15
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jin's Bubble Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Bubble Tea in the heart of Brooklyn, served cold and fresh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "two-five"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "RECOMMENDED FOR YOU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/4",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://target.scene7.com/is/image/Target/GUEST_c21c029c-7fcf-489e-9e85-feedca15982e?wid=488&hei=488&fmt=pjpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "JinPhone 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref, "marginTop", 5), _defineProperty(_ref, "color", "#037362"), _defineProperty(_ref, "fontWeight", "bold"), _ref)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref2 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref2, "marginTop", 5), _defineProperty(_ref2, "color", "#656969"), _defineProperty(_ref2, "fontWeight", "lighter"), _ref2)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/5",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/74E8/production/_112482992__111703877_gettyimages-1128870980.jpg",
+        style: {
+          maxWidth: "30%",
+          marginBottom: 20
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "The Jin York Times"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref3 = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref3, "marginTop", 5), _defineProperty(_ref3, "color", "#037362"), _defineProperty(_ref3, "fontWeight", "bold"), _ref3)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref4 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref4, "marginTop", 5), _defineProperty(_ref4, "color", "#656969"), _defineProperty(_ref4, "fontWeight", "lighter"), _ref4)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/3",
+        style: {
+          minHeight: 70
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/15/0/FNK_Korean-Grilled-Beef-Bulgogi-H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557961246095.jpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "Lauren's Greatest Korean Recipes!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 5,
+          color: "#037362",
+          fontWeight: "bold"
+        }
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref5 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref5, "marginTop", 5), _defineProperty(_ref5, "color", "#656969"), _defineProperty(_ref5, "fontWeight", "lighter"), _ref5)
+      }, "By Lauren"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/1",
+        style: {
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 20,
+          borderTop: "1px solid lightgray",
+          paddingTop: 40
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: 300,
+          marginRight: 10
+        },
+        src: "https://action.scholastic.com/content/dam/classroom-magazines/action/issues/2019-20/040120/superman-becomes-a-star-superheroes-take-over-the-world/07-ACT-040120-p26-PT-Superman-TN.jpg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          marginLeft: 10,
+          paddingLeft: 10,
+          borderLeft: "10px solid rgb(3, 115, 98)"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: "bold"
+        }
+      }, "Superman Returns!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Superman Returns in this action packed thriller! \uC288\uD37C\uB9E8\uC774 \uB3CC\uC544\uC654\uB2E4!"))));
+    }
+  }]);
+
+  return Games;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Games);
 
 /***/ }),
 
@@ -1442,10 +2239,286 @@ var mdp = function mdp(dispatch) {
 /*!******************************************************************!*\
   !*** ./frontend/components/categories/games/games_container.jsx ***!
   \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _games__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./games */ "./frontend/components/categories/games/games.jsx");
+/* harmony import */ var _actions_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../actions/project */ "./frontend/actions/project.js");
 
 
+
+
+
+var msp = function msp(state) {
+  return {
+    currentUser: state.session.currentUser
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    requestMyProjects: function requestMyProjects(userId) {
+      return dispatch(Object(_actions_project__WEBPACK_IMPORTED_MODULE_3__["requestMyProjects"])(userId));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(_games__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/categories/music/music.jsx":
+/*!********************************************************!*\
+  !*** ./frontend/components/categories/music/music.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Music = /*#__PURE__*/function (_React$Component) {
+  _inherits(Music, _React$Component);
+
+  var _super = _createSuper(Music);
+
+  function Music(props) {
+    _classCallCheck(this, Music);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Music, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (window.store.getState().session.currentUser !== null) {
+        this.props.requestMyProjects(window.store.getState().session.currentUser.id);
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var _ref, _ref2, _ref3, _ref4, _ref5;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "main-content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "flex justify-center"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          margin: "20px auto"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        style: {
+          fontWeight: "lighter"
+        }
+      }, "Music"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        style: {
+          fontWeight: "lighter",
+          color: "darkgray"
+        }
+      }, "Discover new albums, performances, and independent venues from creators using Kickstarter to shape the future of sound."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/6",
+        className: "three-five",
+        style: {
+          borderRight: "1px solid lightgray",
+          paddingRight: 0
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "FEATURED PROJECT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: "85%",
+          maxWidth: "85%"
+        },
+        src: "https://miro.medium.com/max/1072/1*0MFdD6_5keqFvIiEX4nrWw.jpeg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          width: "85%",
+          backgroundColor: "#037362",
+          minHeight: 15
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jin's Bubble Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Bubble Tea in the heart of Brooklyn, served cold and fresh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "two-five"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "RECOMMENDED FOR YOU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/4",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://target.scene7.com/is/image/Target/GUEST_c21c029c-7fcf-489e-9e85-feedca15982e?wid=488&hei=488&fmt=pjpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "JinPhone 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref, "marginTop", 5), _defineProperty(_ref, "color", "#037362"), _defineProperty(_ref, "fontWeight", "bold"), _ref)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref2 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref2, "marginTop", 5), _defineProperty(_ref2, "color", "#656969"), _defineProperty(_ref2, "fontWeight", "lighter"), _ref2)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/5",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/74E8/production/_112482992__111703877_gettyimages-1128870980.jpg",
+        style: {
+          maxWidth: "30%",
+          marginBottom: 20
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "The Jin York Times"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref3 = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref3, "marginTop", 5), _defineProperty(_ref3, "color", "#037362"), _defineProperty(_ref3, "fontWeight", "bold"), _ref3)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref4 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref4, "marginTop", 5), _defineProperty(_ref4, "color", "#656969"), _defineProperty(_ref4, "fontWeight", "lighter"), _ref4)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/3",
+        style: {
+          minHeight: 70
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/15/0/FNK_Korean-Grilled-Beef-Bulgogi-H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557961246095.jpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "Lauren's Greatest Korean Recipes!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 5,
+          color: "#037362",
+          fontWeight: "bold"
+        }
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref5 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref5, "marginTop", 5), _defineProperty(_ref5, "color", "#656969"), _defineProperty(_ref5, "fontWeight", "lighter"), _ref5)
+      }, "By Lauren"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/1",
+        style: {
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 20,
+          borderTop: "1px solid lightgray",
+          paddingTop: 40
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: 300,
+          marginRight: 10
+        },
+        src: "https://action.scholastic.com/content/dam/classroom-magazines/action/issues/2019-20/040120/superman-becomes-a-star-superheroes-take-over-the-world/07-ACT-040120-p26-PT-Superman-TN.jpg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          marginLeft: 10,
+          paddingLeft: 10,
+          borderLeft: "10px solid rgb(3, 115, 98)"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: "bold"
+        }
+      }, "Superman Returns!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Superman Returns in this action packed thriller! \uC288\uD37C\uB9E8\uC774 \uB3CC\uC544\uC654\uB2E4!"))));
+    }
+  }]);
+
+  return Music;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Music);
 
 /***/ }),
 
@@ -1453,10 +2526,286 @@ var mdp = function mdp(dispatch) {
 /*!******************************************************************!*\
   !*** ./frontend/components/categories/music/music_container.jsx ***!
   \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _music__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./music */ "./frontend/components/categories/music/music.jsx");
+/* harmony import */ var _actions_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../actions/project */ "./frontend/actions/project.js");
 
 
+
+
+
+var msp = function msp(state) {
+  return {
+    currentUser: state.session.currentUser
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    requestMyProjects: function requestMyProjects(userId) {
+      return dispatch(Object(_actions_project__WEBPACK_IMPORTED_MODULE_3__["requestMyProjects"])(userId));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(_music__WEBPACK_IMPORTED_MODULE_2__["default"]));
+
+/***/ }),
+
+/***/ "./frontend/components/categories/publishing/publishing.jsx":
+/*!******************************************************************!*\
+  !*** ./frontend/components/categories/publishing/publishing.jsx ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Publishing = /*#__PURE__*/function (_React$Component) {
+  _inherits(Publishing, _React$Component);
+
+  var _super = _createSuper(Publishing);
+
+  function Publishing(props) {
+    _classCallCheck(this, Publishing);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Publishing, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (window.store.getState().session.currentUser !== null) {
+        this.props.requestMyProjects(window.store.getState().session.currentUser.id);
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {}
+  }, {
+    key: "render",
+    value: function render() {
+      var _ref, _ref2, _ref3, _ref4, _ref5;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "main-content"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "categories"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+        className: "flex justify-center"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          margin: "20px auto"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        style: {
+          fontWeight: "lighter"
+        }
+      }, "Publishing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+        style: {
+          fontWeight: "lighter",
+          color: "darkgray"
+        }
+      }, "Explore how riters and publishers are using Kickstarter to bring new literature, periodicals, podcasts, and more to life."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "flex"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/6",
+        className: "three-five",
+        style: {
+          borderRight: "1px solid lightgray",
+          paddingRight: 0
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "FEATURED PROJECT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: "85%",
+          maxWidth: "85%"
+        },
+        src: "https://miro.medium.com/max/1072/1*0MFdD6_5keqFvIiEX4nrWw.jpeg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          width: "85%",
+          backgroundColor: "#037362",
+          minHeight: 15
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jin's Bubble Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Bubble Tea in the heart of Brooklyn, served cold and fresh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "two-five"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          marginBottom: 20,
+          color: "#656969"
+        }
+      }, "RECOMMENDED FOR YOU"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/4",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://target.scene7.com/is/image/Target/GUEST_c21c029c-7fcf-489e-9e85-feedca15982e?wid=488&hei=488&fmt=pjpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "JinPhone 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref, "marginTop", 5), _defineProperty(_ref, "color", "#037362"), _defineProperty(_ref, "fontWeight", "bold"), _ref)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref2 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref2, "marginTop", 5), _defineProperty(_ref2, "color", "#656969"), _defineProperty(_ref2, "fontWeight", "lighter"), _ref2)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/2/5",
+        style: {
+          minHeight: 70,
+          borderBottom: "1px solid lightgray"
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/74E8/production/_112482992__111703877_gettyimages-1128870980.jpg",
+        style: {
+          maxWidth: "30%",
+          marginBottom: 20
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "The Jin York Times"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref3 = {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0
+        }, _defineProperty(_ref3, "marginTop", 5), _defineProperty(_ref3, "color", "#037362"), _defineProperty(_ref3, "fontWeight", "bold"), _ref3)
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref4 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref4, "marginTop", 5), _defineProperty(_ref4, "color", "#656969"), _defineProperty(_ref4, "fontWeight", "lighter"), _ref4)
+      }, "By Jin"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/3",
+        style: {
+          minHeight: 70
+        },
+        className: "flex mb-20"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/15/0/FNK_Korean-Grilled-Beef-Bulgogi-H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557961246095.jpeg",
+        style: {
+          maxWidth: "30%"
+        }
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10
+        }
+      }, "Lauren's Greatest Korean Recipes!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 5,
+          color: "#037362",
+          fontWeight: "bold"
+        }
+      }, "0% funded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: (_ref5 = {
+          marginTop: 0,
+          marginLeft: 10
+        }, _defineProperty(_ref5, "marginTop", 5), _defineProperty(_ref5, "color", "#656969"), _defineProperty(_ref5, "fontWeight", "lighter"), _ref5)
+      }, "By Lauren"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://project-kindler.herokuapp.com/?#/projects/1/1",
+        style: {
+          display: "flex",
+          justifyContent: "center",
+          marginTop: 20,
+          borderTop: "1px solid lightgray",
+          paddingTop: 40
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        style: {
+          maxHeight: 300,
+          marginRight: 10
+        },
+        src: "https://action.scholastic.com/content/dam/classroom-magazines/action/issues/2019-20/040120/superman-becomes-a-star-superheroes-take-over-the-world/07-ACT-040120-p26-PT-Superman-TN.jpg"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          marginLeft: 10,
+          paddingLeft: 10,
+          borderLeft: "10px solid rgb(3, 115, 98)"
+        }
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        style: {
+          fontWeight: "bold"
+        }
+      }, "Superman Returns!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Superman Returns in this action packed thriller! \uC288\uD37C\uB9E8\uC774 \uB3CC\uC544\uC654\uB2E4!"))));
+    }
+  }]);
+
+  return Publishing;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Publishing);
 
 /***/ }),
 
@@ -1464,10 +2813,36 @@ var mdp = function mdp(dispatch) {
 /*!****************************************************************************!*\
   !*** ./frontend/components/categories/publishing/publishing_container.jsx ***!
   \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _publishing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./publishing */ "./frontend/components/categories/publishing/publishing.jsx");
+/* harmony import */ var _actions_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../actions/project */ "./frontend/actions/project.js");
 
 
+
+
+
+var msp = function msp(state) {
+  return {
+    currentUser: state.session.currentUser
+  };
+};
+
+var mdp = function mdp(dispatch) {
+  return {
+    requestMyProjects: function requestMyProjects(userId) {
+      return dispatch(Object(_actions_project__WEBPACK_IMPORTED_MODULE_3__["requestMyProjects"])(userId));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(msp, mdp)(_publishing__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
