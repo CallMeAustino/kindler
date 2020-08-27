@@ -1,5 +1,13 @@
 import React from 'react';
 import HomeContainer from './home/home_container';
+import ArtContainer from './categories/art/art_container';
+import ComicsContainer from './categories/comics-illustration/comics_container';
+import DesignContainer from './categories/design-tech/design_container';
+import FilmContainer from './categories/film/film_container';
+import FoodContainer from './categories/food-craft/food_container';
+import GamesContainer from './categories/games/games_container';
+import MusicContainer from './categories/music/music_container';
+import PublishingContainer from './categories/publishing/publishing_container';
 import LoginContainer from './session/login_container';
 import SignUpContainer from './session/signup_container';
 import LearnContainer from './learn/learn_container';
@@ -17,6 +25,14 @@ const App = () => {
     <Modal />
     <Switch>
         <HeaderLayout exact path="/" component={HomeContainer} />
+        <HeaderLayout exact path="/arts" component={ArtContainer} />
+        <HeaderLayout exact path="/comics-illustration" component={ComicsContainer} />
+        <HeaderLayout exact path="/design-tech" component={DesignContainer} />
+        <HeaderLayout exact path="/film" component={FilmContainer} />
+        <HeaderLayout exact path="/food-craft" component={FoodContainer} />
+        <HeaderLayout exact path="/games" component={GamesContainer} />
+        <HeaderLayout exact path="/music" component={MusicContainer} />
+        <HeaderLayout exact path="/publishing" component={PublishingContainer} />
         <ProtectedRoute exact path="/myprojects" component={MyProjects}/>
         <ProtectedRoute path ="/start" component={MasterFormContainer}/>
         <HeaderLayout exact path="/learn" component={LearnContainer} />
