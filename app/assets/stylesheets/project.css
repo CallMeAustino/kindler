@@ -246,10 +246,14 @@ textarea:focus {
 
 .two-three {
     flex-basis: 66.6%;
-    background-color: darkgray;
+    background-color: white;
+    border: darkgray;
     padding: 20px;
     margin: 20px;
     margin-bottom: 0;
+    color: darkgray;
+    text-align: center;
+    line-height: 300px;
 }
 
 .one-three {

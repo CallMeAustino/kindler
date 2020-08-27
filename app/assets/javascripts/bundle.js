@@ -2378,7 +2378,7 @@ var ShowProject = /*#__PURE__*/function (_React$Component) {
             minHeight: 300
           },
           className: "two-three"
-        }, "image goes here"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        }, "No Image Uploaded"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
           className: "one-three"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
           className: "pledged"
