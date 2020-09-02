@@ -14,10 +14,10 @@
  *= require_self
  */
 
- @font-face {
+ /* @font-face {
   font-family: logo;
   src: url('Frankfurter_Std_Regular.otf');
- }
+ } */
 /* pieces */
  
 * {
