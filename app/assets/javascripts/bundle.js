@@ -3086,15 +3086,10 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, "FEATURED PROJECT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         style: {
           maxHeight: "85%",
-          maxWidth: "85%"
+          maxWidth: "85%",
+          borderBottom: "15px solid #037362"
         },
         src: "https://miro.medium.com/max/1072/1*0MFdD6_5keqFvIiEX4nrWw.jpeg"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          width: "85%",
-          backgroundColor: "#037362",
-          minHeight: 15
-        }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jin's Bubble Tea"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Bubble Tea in the heart of Brooklyn, served cold and fresh.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
         className: "two-five"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3112,7 +3107,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://target.scene7.com/is/image/Target/GUEST_c21c029c-7fcf-489e-9e85-feedca15982e?wid=488&hei=488&fmt=pjpeg",
         style: {
-          maxWidth: "30%"
+          maxWidth: "300px"
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
@@ -3145,7 +3140,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://ichef.bbci.co.uk/news/1024/cpsprodpb/74E8/production/_112482992__111703877_gettyimages-1128870980.jpg",
         style: {
-          maxWidth: "30%",
+          maxWidth: "300px",
           marginBottom: 20
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -3173,7 +3168,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/5/15/0/FNK_Korean-Grilled-Beef-Bulgogi-H2_s4x3.jpg.rend.hgtvcom.826.620.suffix/1557961246095.jpeg",
         style: {
-          maxWidth: "30%"
+          maxWidth: "300px"
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         style: {
