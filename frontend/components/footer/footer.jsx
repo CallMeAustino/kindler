@@ -29,7 +29,7 @@ const footer = () => {
                 <div id="support">
                     <h5>SUPPORT</h5>
                     <ul>
-                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://docs.google.com/document/d/1H3U5DY_PQoa4I53AB_Jv5ncSy34oRfPT5Qjm03JmoYU/edit?usp=sharing">Lauren Lee</a></li>
+                        <li><a className="minimal-bttn hover-ksr-green-700" href="https://www.linkedin.com/in/lauren-hyuna-lee/">Lauren Lee</a></li>
                         <li><a className="minimal-bttn hover-ksr-green-700" href="https://www.linkedin.com/in/jlin2235/">Jin Lin</a></li>
                         <li><a className="minimal-bttn hover-ksr-green-700" href="https://www.linkedin.com/in/daniel-guardado-106867197/">Daniel Guardado</a></li>
                         <li><a className="minimal-bttn hover-ksr-green-700" href="https://callmeaustino.github.io/silica/">Mackenzie Young</a></li>

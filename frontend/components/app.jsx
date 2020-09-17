@@ -8,6 +8,7 @@ import FoodContainer from './categories/food-craft/food_container';
 import GamesContainer from './categories/games/games_container';
 import MusicContainer from './categories/music/music_container';
 import PublishingContainer from './categories/publishing/publishing_container';
+import ExploreContainer from './explore/explore_container';
 import LoginContainer from './session/login_container';
 import SignUpContainer from './session/signup_container';
 import LearnContainer from './learn/learn_container';
@@ -33,6 +34,7 @@ const App = () => {
         <HeaderLayout exact path="/games" component={GamesContainer} />
         <HeaderLayout exact path="/music" component={MusicContainer} />
         <HeaderLayout exact path="/publishing" component={PublishingContainer} />
+        <HeaderLayout exact path="/explore" component={ExploreContainer} />
         <ProtectedRoute exact path="/myprojects" component={MyProjects}/>
         <ProtectedRoute path ="/start" component={MasterFormContainer}/>
         <HeaderLayout exact path="/learn" component={LearnContainer} />

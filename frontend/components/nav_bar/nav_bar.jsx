@@ -20,7 +20,7 @@ const navBar = ({currentUser, logout, toggleShow}) => {
     <section className="relative" id="global-header">
         <section className="global-nav-left items-center">
             
-            <button className="minimal-bttn hover-ksr-green-700 mr">Explore</button>
+            <Link className="minimal-bttn hover-ksr-green-700 mr" to="/explore">Explore</Link>
             
             
             <Link className="minimal-bttn hover-ksr-green-700 mr" to="/learn">Start a project</Link>
@@ -30,7 +30,8 @@ const navBar = ({currentUser, logout, toggleShow}) => {
             <Link to='/'>Kindler</Link>
         </section>
         <section className="global-nav-right items-center">
-            <button className="minimal-bttn hover-ksr-green-700 mr">Search</button>
+            <button className="minimal-bttn hover-ksr-green-700 mr tooltip">Search
+                <span className="tooltiptext">This feature is in the works!</span></button>
             {display}
         </section> 
     </section>
